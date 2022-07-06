@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ayuda JavaScript</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+
+</head>
+<body>
+	<h1 class="Titulo">JavaScript</h1>
+	<br><br><br><br>
+
+<div class="Blur">
+	<h1 class="Tema">Generalidades</h1>
+	<p class="Explicacion">-Para asignar un valor es con <b>=</b>
+		<br>
+		-Para decir que es 'igual a' es <b>==</b>
+		<br>
+		-Para imprimir algo en pantalla es <b>document.write("mensaje")</b>
+		<br>
+		-Para mostrar un cuadrito arriba con informaci&oacute;n es <b>alert("Mensaje")</b>
+		<br>
+		-Para mostrar el mismo cuadrito del alert pero para que ingrese informaci&oacute;n es <b>prompt("Escribir mensaje:")</b>
+		<br>
+		-Para cambiar el valor de String a Int es con <b>variable = parseInt(variable);</b>
+	</p>
+</div><br>
+
+<div class="Blur">
+	<br><br>
+	<h1 class="Tema">Para definir variables</h1>
+	<p class="Explicacion">Se puede definir con <b>Let, const y var</b>
+		<br>
+		Ejemplo:
+		<br>
+		<b>&nbsp; &nbsp; &nbsp; Let nombreVariable</b>
+	</p>
+</div><br>
+
+
+<div class="Blur">
+	<br><br>
+	<h1 class="Tema">Arrays</h1>
+	<p class="Explicacion">Es como una variable pero podemos guardar muchas cosas en el<br>
+	Por ejemplo: <br>
+		<b> &nbsp; &nbsp; &nbsp; let frutas = ["pera", "manzana", "fresa"];</b><br><br>
+		Podemos mostrar todos los elementos, o individuales asi:<br>
+		<b>document.write(frutas[1]);<br>
+		</b>
+		Que imprime: <b>manzana</b> por que empieza desde el cero
+	<br><br><br>
+	Tambien existen Arrays Asociativos con los que identificamos los nombres de los elementos<br>
+	Ejemplo:<br>
+		<b>let Computadora = {<br>
+			&nbsp; &nbsp; &nbsp; nombre: "TiBOPC",<br>
+			&nbsp; &nbsp; &nbsp; procesador: "intel Core i7",<br>
+			&nbsp; &nbsp; &nbsp; RAM: "16 GB",<br>
+			&nbsp; &nbsp; &nbsp; Espacio: "1TB",<br>
+			&nbsp; &nbsp; &nbsp; Lectora: "DVD"<br>
+			};<br><br>
+		document.write(Computadora["nombre"])<br>
+		</b>
+		Que imprime: <b>TiBOPC</b> por que identificamos que "nombre" tenia ese valor
+	</p>
+</div><br>
+
+<div class="Blur">
+	<br><br>
+	<h1 class="Tema">Para concatenar</h1>
+	<p class="Explicacion">Se puede hacer con el simbolo <b>+</b>
+		<br>
+		Pero tambien se puede haciendo esto:
+		<br>
+		<b>`Este es un texto ${variable} concatenado`</b>
+	</p>
+</div><br>
+
+
+<div class="Blur">
+	<br><br>
+	<h1 class="Tema">Estructura IF</h1>
+	<p class="Explicacion"> 
+	Si se cumple la condición se ejecutará lo que haya adentro<br><br>
+	Ejemplo 1: <br>
+								<b>if(variable == valor){<br>
+								&nbsp; &nbsp; &nbsp; Se ejecuta codigo<br>
+								}<br></b>
+								<br><br>
+	Ejemplo 2 con else: <br>
+								<b>if(variable > valor){<br>
+								&nbsp; &nbsp; &nbsp; Se ejecuta codigo<br>
+								}<br>
+								else{<br>
+								&nbsp; &nbsp; &nbsp; Se ejecuta otro codigo<br>
+								}</b>
+	</p>
+</div><br>
+
+
+<div class="Blur">
+	<br><br>
+	<h1 class="Tema">Estructura While</h1>
+	<p class="Explicacion">Mientras se cumpla la condición se ejecutará el codigo que haya adentro<br>
+		Ejemplo:<br><br>
+		<b>
+			let numero = 1;<br><br>
+			while (numero < 6){<br>
+			&nbsp; &nbsp; &nbsp; numero++;<br>
+			&nbsp; &nbsp; &nbsp; document.write(numero);<br>
+			}
+		</b>
+	</p>
+</div><br>
+
+
+<div class="Blur">
+	<br><br>
+	<h1 class="Tema">Break para el While</h1>
+	<p class="Explicacion">Sirve para parar el bucle<br>
+		Sirve para todas las estructuras<br>
+		Ejemplo:<br><br>
+		<b>
+			let numero = 1;<br><br>
+			while (numero < 1000){<br>
+			&nbsp; &nbsp; &nbsp; numero++;<br>
+			&nbsp; &nbsp; &nbsp; document.write(numero);<br>
+			&nbsp; &nbsp; &nbsp; if (numero == 10){<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break <br>
+			&nbsp; &nbsp; &nbsp;}<br>
+			}
+		</b>
+	</p>
+</div>	<br>
+
+
+<div class="Blur">
+	<br><br>
+	<h1 class="Tema">Estructura Do While</h1>
+	<p class="Explicacion">Se ejecuta el código primero, luego pregunta una condición, y, si se cumple<br>
+	se vuelve a ejecutar, y así hasta que la condición ya no se cumpla<br><br>
+	Ejemplo: <br><br>
+	<b>
+			let numero = 1;<br><br>
+			do{<br>
+			&nbsp; &nbsp; &nbsp; numero++;<br>
+			&nbsp; &nbsp; &nbsp; document.write(numero);<br>
+			} while (numero < 6){<br>
+		</b>
+	</p>
+</div><br>
+
+
+<div class="Blur">
+	<br><br>
+	<h1 class="Tema">Estructura For</h1>
+	<p class="Explicacion">
+		Nosotros le decimos cuantas veces se va a repetir el codigo<br>
+		Ejemplo:<br><br>
+		<b>
+			for(let i = 0; i < 20; i++){<br>
+			&nbsp; &nbsp; &nbsp; document.write(i);<br>
+			}
+		</b>
+	</p>
+</div><br>
+
+
+
+<div class="Blur">
+	<br><br>
+	<h1 class="Tema">For in</h1>
+	<p class="Explicacion">
+		Nos devuelve la posición de los elementos del Array<br>
+		Ejemplo: <br><br>
+		<b>
+		let frutas = ["pera", "manzana", "fresa"];<br>
+		for (fruta in frutas){<br>
+			&nbsp; &nbsp; &nbsp; document.write(fruta);<br>
+		} </b><br><br>
+		Que imprime: <b>0, 1, 2</b>
+	</p>
+</div><br>
+
+
+<div class="Blur">
+		<br><br>
+	<h1 class="Tema">For of</h1>
+	<p class="Explicacion">
+		Nos devuelve los elementos del Array<br>
+		Ejemplo: <br><br>
+		<b>
+		let frutas = ["pera", "manzana", "fresa"];<br>
+		for (fruta of frutas){<br>
+			&nbsp; &nbsp; &nbsp; document.write(fruta);<br>
+		} </b><br><br>
+		Que imprime: <b>pera, manzana, fresa</b>
+	</p>
+</div><br>
+
+
+
+<div class="Blur">
+	<br><br>
+	<h1 class="Tema">Funciones</h1>
+	<p class="Explicacion">Son porciones de codigo que se utilizan para realizar una accion con la posibilidad de ejecutarlo despues<br><br>
+		Ejemplo 1: con la palabra function<br>
+		<b>
+			&nbsp; &nbsp; function saludar(){<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.write("Hola!");<br>
+			&nbsp; &nbsp; }<br><br>
+			saludar();<br><br><br>
+		</b>
+
+		Ejemplo 2: con la palabra function devolviendo un resultado<br>
+		<b>
+			&nbsp; &nbsp; function suma(num1, num2){<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let res = num1 + num2;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return res;<br>
+			&nbsp; &nbsp; }<br><br>
+			let resultado = suma(20, 25);<br>
+			document.write(resultado)
+		</b>
+		<br><br><br>
+		Ejemplo 2: como flecha<br>
+		<b>
+			&nbsp; &nbsp;const saludar(nombre)=>{<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let frase = `Hola ${nombre} como estas`;<br>
+			&nbsp; &nbsp; }<br>
+			<br>
+			saludar("Pedro");<br>
+		</b>
+	</p>
+</div>	<br>
+
+
+<div class="Blur">
+	<br><br>
+	<h1 class="Tema">Definición de Clases</h1>
+	<p class="Explicacion">De programación orientada a objetos, sirve para crear objetos definiendo los parametros, metodos y propiedades de estos objetos<br><br>
+	
+		Ejemplo 1: Definimos la clase, creamos el objeto y mostramos una propiedad<br>
+		<b>
+			&nbsp; &nbsp;class Animal {<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; constructor(especie, edad, color){<br>
+			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.especie = especie;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.edad = edad;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.color = color;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp;}<br>
+			&nbsp; &nbsp;}<br><br>
+			const perro = new Animal("perro", 5, "café");<br>
+			document.write("perro.color")
+		</b>
+		<br><br><br>
+		Ejemplo 2: Creamos la clase, creamos tres objetos, creamos un metodo y mostramos el metodo por cada objeto con sus propiedades<br>
+		OJO: <b>LAS FUNCIONES FLECHA NO PUEDEN SER USADAS PARA DEFINIR UN METODO</b><br><br>
+		<b>
+				&nbsp; &nbsp;class Animal {<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; constructor(especie, edad, color){<br>
+			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.especie = especie;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.edad = edad;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.color = color;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.info = `Soy ${this.especie}, tengo ${this.edad} años y soy de color ${this.color}`;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; }<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; verInfo(){<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.write(this.info);<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; }<br>
+			&nbsp; &nbsp;}<br><br>
+			const perro = new Animal("perro", 5, "café");<br>
+			const gato = new Animal("gato", 3, "blanco");<br>
+			const pajaro = new Animal("pajaro", 4, "verde");<br><br>
+			perro.verInfo( );<br>
+			gato.verInfo( );<br>
+			pajaro.verInfo( );<br>
+		</b>
+	</p>
+</div>	<br>
+
+
+<div class="Blur">
+<br><br>
+	<h1 class="Tema">Conceptos de POO</h1>
+	<p class="Explicacion">Es un paradigma de programación asi como otros, que se basa en, como su nombre lo indica, crear objetos<br>
+		Tiene algunas caracteristicas como:<br>
+		<b>--Abstracción:</b> Intentar reducir el objeto a sus componentes basicos, por ejemplo, si tenemos un perro, no decimos tamaño de la cabeza, color de la cola, etc<br>
+		<b>--Modularidad:</b> Resolver un problema grande diviviendolo por partes<br>
+		<b>--Encapsulamiento:</b> Hacer que todos los datos sean privados, encapsular los datos<br>
+		<b>--Polimorfismo:</b> Ver como un objeto se comporta diferente ante un metodo, por ejemplo, si tengo el metodo caminar, un perro va a caminar diferente que un pajaro por las propiedades que tiene<br>
+		<b>--Herencia:</b> Sirve para agregarle mas propiedades o metodos a una clase, heredando cosas de la clase principal<br>
+		Ejemplo de Herencia:<br><br>
+		<b>
+			&nbsp; &nbsp; class Perro <i>extends</i> Animal{<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; constructor(especie, edad, color, raza){<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; super(especie, edad, color);<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.raza = raza;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; } <br>
+			&nbsp; &nbsp; }<br><br>
+			const perro = new Perro("perro", 7, "negro", "Pastor aleman");<br><br>
+		</b>
+		Y ahora puede tener los metodos de la clase Animal, y los parametros que puso en super<br><br>
+		<b>--Metodos estaticos:</b> Son los metodos de una clase que se pueden utilizar antes de crear un objeto o que no necesitan que el objeto se haya creado para poder usarse<br>
+		Ejemplo:<br>
+		<b>
+			&nbsp; &nbsp; class Perro <i>extends</i> Animal{<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; constructor(especie, edad, color, raza){<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; super(especie, edad, color);<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.raza = raza;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp;}<br>
+			&nbsp; &nbsp; &nbsp; static ladrar( ){<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert("Wof"); <br>
+			&nbsp; &nbsp; &nbsp; }<br>
+			&nbsp; &nbsp; }<br><br>
+			&nbsp; &nbsp; Perro.ladrar( );<br>
+		</b>
+		Como podemos ver, la clase Perro, puede usar el metodo static sin haber creado el objeto por que no utiliza ningun parametro
+		<br><br><br>
+		<b>--Metodo Get y Set:</b> <br>
+		Get se utiliza para traer el valor de un parametro y set para asignarlo<br>
+		Ejemplo:<br><br>
+		<b>
+			&nbsp; &nbsp; class Perro <i>extends</i> Animal{<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; constructor(especie, edad, color, raza){<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; super(especie, edad, color);<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.raza = raza;<br>
+			&nbsp; &nbsp; &nbsp; &nbsp;}<br><br>
+
+			&nbsp; &nbsp; &nbsp; set setRaza(newRaza){<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.raza = newRaza; <br>
+			&nbsp; &nbsp; &nbsp; }<br><br>
+			&nbsp; &nbsp; &nbsp; get getRaza( ){<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return this.raza; <br>
+			&nbsp; &nbsp; &nbsp; }<br>
+			&nbsp; &nbsp; }<br><br>
+			&nbsp; &nbsp; perro.setRaza = "Pedro"; <br>
+			&nbsp; &nbsp; document.write(perro.getRaza);
+			</b><br><br>
+		Esto imprime la raza pedro por que la modificamos con set y trajimos el valor con Get
+
+	</p>
+</div> <br>
+
+
+
+
+<div class="Blur">
+<br><br>
+<h1 class="Tema">Metodos de cadena</h1>	
+<p class="Explicacion">
+	Son metodos que se pueden utilizar para modificar las cadenas de texto.<br><br>
+	<b>----Concat( )----</b><br>
+	Junta dos o mas cadenas y las retorna.<br>
+	Ejemplo:<br>
+	<b>
+	&nbsp; &nbsp; &nbsp; let cadena = "cadena 1";<br>
+	&nbsp; &nbsp; &nbsp; let cadena2 = "cadena 2";<br><br>
+	&nbsp; &nbsp; &nbsp; resultado = cadena.concat(cadena2);<br><br>
+	&nbsp; &nbsp; &nbsp; document.write(resultado);
+	</b><br><br><br><br>
+	<b>----startsWith( ) y endsWith( )----</b><br>
+	Si una cadena empieza o termina con los caracteres de otra cadena devuelve true, sino false<br>
+	Ejemplo:<br>
+	<b>
+	&nbsp; &nbsp; &nbsp; let cadena = "cadena de prueba";<br>
+	&nbsp; &nbsp; &nbsp; let cadena2 = "cadena";<br><br>
+	&nbsp; &nbsp; &nbsp; resultado = cadena.startsWith(cadena2);<br><br>
+	&nbsp; &nbsp; &nbsp; document.write(resultado);
+	</b><br>
+	Esto devuelve <b>True</b> en pantalla, por que si empieza con esa cadena, con endsWith devuelve false, por que no temina asi.
+	<br><br><br><br>
+	<b>----includes----</b><br>
+	Si una cadena se encuentra (en cualquier parte) dentro de otra cadena devuelve true, sino false<br><br><br>
+	<b>----indexOf y lastIndexOF----</b>
+	<br>
+	Devuelve el indice del primer o ultimo caracter de la cadena, si no existe, devuelve -1<br>
+	Ejemplo:<br>
+	<b>
+	&nbsp; &nbsp; &nbsp; let cadena = "cadena de prueba si";<br>
+	&nbsp; &nbsp; &nbsp; let cadena2 = "prueba";<br><br>
+	&nbsp; &nbsp; &nbsp; resultado = cadena.indexOf(cadena2);<br><br>
+	&nbsp; &nbsp; &nbsp; document.write(resultado);
+	</b><br>
+	Esto devuelve <b>11</b> en pantalla, por que el primer caracter de la cadena, la "p", está en la posicion 11<br>si fuera lastIndexOf( ) sería <b>16</b> por que es el indice del ultimo caracter de la cadena
+	<br><br><br><br>
+	<b>----padStart( ) y padEnd( )----</b><br>
+	Rellena la cadena al principio o final con los caracteres deseados.<br>
+	Ejemplo:<br>
+	<b>
+	&nbsp; &nbsp; &nbsp; let cadena = "abc";<br>
+	&nbsp; &nbsp; &nbsp; let cadena2 = "";<br><br>
+	&nbsp; &nbsp; &nbsp; resultado = cadena.padStart(10, "12");<br><br>
+	&nbsp; &nbsp; &nbsp; document.write(resultado);
+	</b><br><br>
+	Esto devuelve <b>1212121abc</b> en pantalla, se agregan los necesesarios "12" para completar los 10 caracteres que se definieron, aunque falte uno se pone para llegar a 10, si fuera el padEnd: <b>abc1212121</b><br><br><br><br>
+	<b>----repeat( )----</b><br>
+	Devuelve la misma cadena pero repetida la cantidad de veces que deseamos<br>
+	Ejemplo: <b>abcabcabc</b> si escribimos al ejemplo de arriba <b>resultado = cadena.repeat(3);</b><br><br><br><br>
+	<b>----split( )----</b><br> Divide la cadena en un array, desde donde nosotros le indicamos<br>
+	Ejemplo: <br>
+	<b>
+	&nbsp; &nbsp; &nbsp; let cadena = "Hola como estas";<br>
+	&nbsp; &nbsp; &nbsp; resultado = cadena.split("como");<br><br>
+	&nbsp; &nbsp; &nbsp; document.write(resultado[0]);
+	</b><br><br>	
+	Esto devuelve <b>Hola</b> en pantalla, por que separamos desde donde nosotros le indicamos <br>
+	el <b>como</b> se elimina<br>
+	en <b>resultado[1]</b> está el <b>estas</b><br> y si pusieramos solo un espacio, separa esa cadena en tres partes por los tres espacios: [Hola,como,estas]<br><br><br><br>
+	<b>----substring( )-----</b><br> Nos retorna un pedazo de la cadena empezando y terminando desde donde nosotros deseamos<br>	Ejemplo: <br>
+	<b>
+	&nbsp; &nbsp; &nbsp; let cadena = "ABCDEFG";<br>
+	&nbsp; &nbsp; &nbsp; resultado = cadena.substring(2,4);<br><br>
+	&nbsp; &nbsp; &nbsp; document.write(resultado);
+	</b><br><br>
+	Esto devuelve <b>CD</b> en pantalla, ya que toma la posicion 2 y 3 porque OJO toma el indice del inicio pero no el del final<br><br><br><br>
+	<b>----toUpperCase( )</b> y  <b>toLowerCase( )----<br></b> Pasa la cadena de minuscula a mayuscula y viceversa<br><br><br><br>
+	<b>----toString( )----</b><br> Pasa a String<br><br><br><br>
+	<b>----trim( ), trimStart( ) y trimEnd( )----</b><br> Quita los espacios al inicio y al final de una cadena, solo los espacios del inicio o solo los del final respectivamente.<br>
+	
+</p>
+</div> <br>
+
+
+<div class="Blur">
+	<br><br>
+	<h1 class="Tema">Metodos de Arrays</h1> <br>
+	<p class="Explicacion">
+		----Transformadores----<br><br>
+		<b>--Pop( ) :</b> Elimina el ultimo elemento de un array y lo devuelve<br>
+		Ejemplo:<br>
+		<b>
+			&nbsp; &nbsp; &nbsp; let nombres = ["pedro", "maria", "jorge"];<br>
+			&nbsp; &nbsp; &nbsp; let resultado = nombres.pop();<br><br>
+			&nbsp; &nbsp; &nbsp; document.write(nombres);<br><br>
+		</b>
+		Aqui muestra <b>jorge</b> por que fue el que eliminó por ser el ultimo elemento del array<br><br><br><br>
+		<b>--shift( ) :</b> Elimina el primer elemento de un array y lo devuelve, asi como el anterior.<br><br><br><br>
+		<b>--push( ) :</b> Agrega uno mas elementos al final del array y devuelve la cantidad de elementos, o la posicion del ultimo elemento que es lo mismo. <b>let resultado = nombres.pop("Elemento n");</b> <br><br><br><br>
+		<b>--unshift( ) :</b> Agrega uno o mas elementos al inicio del array y devuelve la cantidad de elementos.<br><br><br><br>
+		<b>--reverse( ) :</b> Invierte el orden de los elementos del array. <br><br><br><br>
+		<b>--sort( ) :</b> Ordena los elementos de un array localmente y lo devuelve ordenado (si hay numeros los ordena de menor a mayor o si son palabras, alfabeticamente)<br><br><br><br>
+		<b>--splice( ) :</b> Cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos. <b>numeros.splice(2, 1, "Juan")</b> con esto, decimos desde que posicion vamos a empezar a trabajar, desde que elementos vamos a eliminar, y si vamos a agregar elementos los especificamos ahi.<br><br><br><br>
+		----Transformadores----<br><br>
+		<b>--join( ) :</b> Une todos los elementos de un array en una cadena y lo devuelve, es como el toString( ), pero mejor, por que deja poner como lo vamos a separar al integrarlo a la cadena<br>
+		Ejemplo:<br>
+		<b>
+			&nbsp; &nbsp; &nbsp; let nombres = ["pedro", "maria", "jorge"];<br>
+			&nbsp; &nbsp; &nbsp; let resultado = nombres.join(" - ");<br><br>
+			&nbsp; &nbsp; &nbsp; document.write(resultado);<br><br>
+		</b>
+		Esto muestra: <b>pedro - maria - jorge</b> como una cadena de texto<br><br><br><br>
+		<b>--slice( ) :</b> devuelve una parte de nuestro array, desde donde y hasta donde nosotros le indicamos, <br> <b>let resultado = numeros.slice(1, 5)</b> el ultimo numero no está incluido<br><br><br><br>
+		--Los metodos de cadena que ya vimos como: <b>toString( ), indexOf( ) que devuelve en que posicion del array está el elemento que le indicamos, includes( ) que nos dice true o false si lo incluye</b><br><br><br><br>
+		----De repetición----<br><br>
+		<b>--filter( ) :</b> crea un nuevo array con todos los elementos que cumplan la condicion<br>
+		filter( ) trabaja con una funcion y en cada vuelta, el parametro va a ser igual a cada elemento del array y podemos ponerle una condicion
+		Ejemplo:<br>
+		<b>
+			&nbsp; &nbsp; &nbsp; let nombres = ["abecedario", "manzana", "pedro", "dedo", "bob", "pedro"];<br>
+			&nbsp; &nbsp; &nbsp; let resultado = nombres.filter(let numero => numero.length > 4);<br><br>
+			&nbsp; &nbsp; &nbsp; document.write(resultado);<br><br>
+		</b>
+		Esto muestra en pantalla <b>abecedario, manzana, pedro, pedro</b> por que los otros dos no cumplen con la condicion de tener mas de cuatro letras<br><br><br><br>
+		--forEach( ): Aqui investigar sobre que es forEach mas a fondo.
+	</p>
+
+
+</div>
+
+</body>
+</html>

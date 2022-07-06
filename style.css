@@ -1,0 +1,58 @@
+/*
+
+- Oyange es un tipo de fuente de escritura a mano
+- Buenas fuentes para una pagina: Noir, Dosis, gabriola	;
+*/
+
+::-webkit-scrollbar{
+	display: none;
+}
+
+body{
+	background-image: url("images/FondoVerdeOscuro2.jpg");
+
+}
+
+.Blur{
+	backdrop-filter: blur(5px);
+	background-color: rgba(255, 255, 255, 0.1);
+	margin-left: 15%;
+	margin-right: 15%;
+	padding: 5%;
+}
+
+.Titulo{
+	color: white;
+	text-align: center;
+	font-family: LeviReBrushed;
+	font-size: 62px;
+	text-shadow: 4px 4px black;
+}
+
+
+.Tema{
+	font-family: Noir;
+	color: white;
+	margin-left: 50px;
+
+}
+
+
+.Explicacion{
+	font-size: 25px;
+	font-family: Gabriola;
+	color: white;
+	margin-left: 65px;
+	line-height: 25px;
+
+}
+
+b{
+	text-shadow: 1px 1px black !important;
+}
+
+h1, h2, p{
+	margin: 0;
+	padding: 0;
+
+}
