@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<!-- Boton de ir arriba -->
 	<div id="button-up">
 	<i class="fa-solid fa-caret-up"></i>
 	</div>
 
+		<!-- Boton de ir abajo -->
+	<div id="button-down" onclick="scrollDown()">
+	<i class="fa-solid fa-caret-down"></i>
+	</div>
+
+
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Ayuda JavaScript</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="script.js"></script>
 	<script src="https://kit.fontawesome.com/619056049f.js" crossorigin="anonymous"></script>
+
+	<title>Ayuda JavaScript</title>
 </head>
+
 <body>
 	<h1 class="Titulo">JavaScript</h1>
 	<br><br><br><br>
@@ -468,10 +478,109 @@
 		Esto muestra en pantalla <b>abecedario, manzana, pedro, pedro</b> por que los otros dos no cumplen con la condicion de tener mas de cuatro letras<br><br><br><br>
 		--forEach( ): Aqui investigar sobre que es forEach mas a fondo.
 	</p>
+</div><br>
 
+<div class="Blur">
+	<h1 class="Tema">Funciones de math</h1><br>
+	<p class="Explicacion">
+		<b>-Math.sqrt( )</b> : Devuelve la raiz cuadrada positiva de un numero<br>
+		Ejemplo: numero = Math.sqrt(25);<br><br>
+		<b>-Math.cbrt( )</b> : Devuelve la raiz cubica de un numero<br><br>
+		<b>-Math.max( )</b> : Devuelve el numero mayor<br><br>
+		<b>-Math.min( )</b> : Devuelve el numero menor<br><br>
+		<b>-Math.random( )</b> : Devuelve un numero aleatorio<br><br>
+		<b>-Math.round( )</b> : Redondea al numero mas cercano<br><br>
+		<b>-Math.floor( )</b> : Devuelve el numero redondeado para abajo<br><br>
+		<b>-Math.trunc( )</b> : Devuelve el numero mayor<br><br>
+		<b>-Math.trunc( )</b> : Elimina los decimales<br><br>
+	</p>
+</div><br>
+
+<div class="Blur">
+	<h1 class="Tema">Consola</h1><br>
+	<p class="Explicacion">
+		---Funciones de registro---<br>
+	<b>-console.clear( )</b> : Limpia la consola<br>
+	<b>-console.error( )</b> : Muestra un error<br>
+	<b>-console.table( )</b> : Muestra una tabla en consola si le pasamos un array entre los parentesis<br>
+	<b>-console.clear()</b> : Limpia la consola<br><br>
+	---Funciones de conteo---<br>
+	<b>-console.count( )</b> : Va contando cuantas veces lo ponemos en consola<br>
+	<b>-console.countReset( )</b> : Resetea el conteo anterior<br><br>
+	---Funciones de tiempo---<br>
+	<b>-console.time( )</b> : Comienza un contador de tiempo<br>
+	<b>-console.timeLog( )</b> : Muestra el tiempo del contador mientras está en ejecucion<br>
+	<b>-console.timeEnd( )</b> : Finaliza el contador y nos muestra hasta donde contó<br><br>
+	Por cierto, se puede modificar el estilo de texto en consola con CSS
+</p>
+</div><br>
+
+<div class="Blur">
+	<h1 class="Tema">DOM</h1><br>
+	<p class="Explicacion">
+		Son todos los elementos de una pagina web<br>
+		Nodos: Cualquier etiqueta del HTML<br>
+		Nodo Document: es el nodo raiz apartir del cual derivan el resto de nodos<br>
+		Nodo Element: nodos definidos por etiquedas html<br>
+		Nodo Text: el texto dentro de un nodo Element es considerado un nuevo nodo hijo de tipo text <br>
+		Nodo Attribute: los atributos de las etiquetas, aunque en JavaScript no los veremos como nodos sino como informacion asociada al nodo de tipo element<br>
+		Y los nodos de comentarios y otros elementos<br> <br><br>
+	</p>
+		<h2	class="Tema">Document - Metodos de seleccion de elementos</h1><br>
+		<p class="Explicacion">
+			<b>--Document.getElementByID( )</b> : Selecciona un elemento por ID que coloquemos dentro de los parentesis<br>
+			<b>--Document.getElementsByTagName( )</b> : Selecciona todos los elementos que coincidad con la etiqueta que coloquemos dentro de los parentesis<br>
+			<b>--Document.querySelector( )</b> : Nos devuelve el primer elemento que coincida con el grupo especificado de selectores<br>Ejemplo: Document.querySelector(".parrafo");<br>
+			<b>--Document.querySelectorAll( )</b> : Selecciona todos los elementos que coincidadn con el grupo especificado de selectores<br><br><br>
+		</p>
+
+		<h2	class="Tema">Element - Metodos para Definir, Obtener y Eliminar valores de atributos</h1><br>
+		<p class="Explicacion">
+			<b>--Element.setAttribute( )</b> : Modifica el valor de un atributo, el primer parametro es lo que queremos modificar y el segundo es el valor a modificar. Y ademas, si no tiene el atributo y se lo ponemos al inicio, lo crea<br><br> &nbsp; &nbsp; &nbsp; <b> Ejemplo: </b><br> &nbsp; &nbsp; &nbsp; const randoEtario = document.querySelector(".rangoEtario");<br>
+			&nbsp; &nbsp; &nbsp; rangoEtario.setAttribute("type", "text"); <br><br><br>
+			<b>--Element.getAttribute( )</b> : obtiene el valor de un atributo<br><br>
+			&nbsp; &nbsp; &nbsp; <b>Ejemplo:</b> <br>
+			&nbsp; &nbsp; &nbsp; 	const rangoEtario = document.querySelector(".rangoEtario");<br>
+			&nbsp; &nbsp; &nbsp; valor = rangoEtario.getAttribute("type");<br>
+			&nbsp; &nbsp; &nbsp; document.write(valor);<br><br>
+			Lo cual imprime <b>Text</b> por ejemplo, por que es el valor del atributo Type<br><br><br>
+			<b>--Element.removeAttribute( )</b> : Elimina el valor de un atributo<br><br><br><br>
+		</p>
+
+		<h2	class="Tema">Atributos globales</h1><br>
+		<p class="Explicacion">
+			Son los atributos que contienen todos los elementos HTML<br>
+			<b>--contentEditable</b> : Hace que el contenido del parrafo o Titulo se pueda modificar<br>
+			&nbsp; &nbsp; &nbsp; <b>Ejemplo:</b><br>
+			&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
+			&nbsp; &nbsp; &nbsp; titulo.setAttribute("contentEditable", "true");<br><br>
+			Esto hace que en la pagina web se pueda editar el elemento con la clase ".titulo"<br><br>
+			<b>--tabIndex</b> : Indica si el elemento puede tener un focus, PD: el segundo parametro del parentesis en lugar de ser true o false, es un numero<br><br>
+			<b>--title</b> :  contiene un texto con informacion relacionada al elemento que pertenece<br><br>
+			Hay un monton de atributos globales, como el dir para la direccion del texto, el hidden etc etc etc<br><br> 
+		</p>
+
+
+		<h2	class="Tema">Atributos de inputs</h1><br>
+		<p class="Explicacion">
+			Atributos para los Inputs de un formulario<br>
+			<b>--className</b> : Se usa para capturar el nombre la clase del input<br>
+			&nbsp; &nbsp; &nbsp; <b>Ejemplo:</b><br>
+			&nbsp; &nbsp; &nbsp; const input = document.querySelector(".input-normal");<br>
+			&nbsp; &nbsp; &nbsp; document.write(input.className);<br><br>
+			Esto muestra en pantalla la clase del input<br><br>
+			<b>--value</b> : Nos dice que es lo que esta adentro del input<br><br>
+			<b>--type</b> :  Para modificar el tipo del input<br><br>
+			<b>--accept</b> : Es lo que va a aceptar el input, se usa mucho para los tipo File para decirle que acepte imagen .png o cual sea que queramos<br><br>
+			<b>--form</b> : Nos permite ejecutar un input dentro de un for previamente declarado, aunque este input no este dentro de ese formulario, btw se usa el id<br><br>
+			<b>--minLength</b> : Para los inputs de tipo texto se pone cuandos caracteres minimos tiene que tener para poder enviarse, funciona con clase btw<br><br>
+			<b>--placeholder</b> : Es el texto que aparece en gris antes de escribir en el input<br>
+			&nbsp; &nbsp; &nbsp; <b>Ejemplo:</b><br>
+			&nbsp; &nbsp; &nbsp; input.placeholder = "Primer nombre";<br><br>
+			<b>--require</b> : Nos permite decir si es requerido o no<br><br>
+		</p>
 
 </div>
-
 
 </body>
 </html>
