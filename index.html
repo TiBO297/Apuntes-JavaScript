@@ -557,7 +557,7 @@
 			Esto hace que en la pagina web se pueda editar el elemento con la clase ".titulo"<br><br>
 			<b>--tabIndex</b> : Indica si el elemento puede tener un focus, PD: el segundo parametro del parentesis en lugar de ser true o false, es un numero<br><br>
 			<b>--title</b> :  contiene un texto con informacion relacionada al elemento que pertenece<br><br>
-			Hay un monton de atributos globales, como el dir para la direccion del texto, el hidden etc etc etc<br><br> 
+			Hay un monton de atributos globales, como el dir para la direccion del texto, el hidden etc etc etc<br><br><br> 
 		</p>
 
 
@@ -577,7 +577,7 @@
 			<b>--placeholder</b> : Es el texto que aparece en gris antes de escribir en el input<br>
 			&nbsp; &nbsp; &nbsp; <b>Ejemplo:</b><br>
 			&nbsp; &nbsp; &nbsp; input.placeholder = "Primer nombre";<br><br>
-			<b>--require</b> : Nos permite decir si es requerido o no<br><br>
+			<b>--require</b> : Nos permite decir si es requerido o no<br><br><br>
 		</p>
 
 		<h2	class="Tema">Atributos Style</h1><br>
@@ -586,7 +586,34 @@
 			Por ejemplo:<br>
 			&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
 			&nbsp; &nbsp; &nbsp; titulo.style.color = "red";<br><br>
-			Lo que nos muestra el elemento con la clase titulo de color rojo
+			Lo que nos muestra el elemento con la clase titulo de color rojo<br><br>
+			En ocasiones donde el atributo lleve guion, se reemplaza con camelCase, como por ejemplo Background-color se reemplaza con BackgroundColor<br><br><br>
+		</p>
+
+			<h2	class="Tema">Clases, classList y Metodos de classList</h1><br>
+		<p class="Explicacion">
+			Con classList podemos modificar todo lo relacionado con las clases de un elemento<br><br>
+			Por ejemplo:<br>
+			<b>--Elemento.classList.add()</b><br>
+			&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
+			&nbsp; &nbsp; &nbsp; titulo.classList.add("grande");<br><br>
+			que agrega una nueva clase llamada grande al elemento;<br><br><br>
+			<b>--Elemento.classList.remove()</b><br>
+			Remueve una clase del elemento<br><br><br>
+			<b>--Elemento.classList.item()</b><br>
+			Almacena la clase que se encuentra en la posicion que le indicamos<br>
+			Por ejemplo: <br>
+			&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
+			&nbsp; &nbsp; &nbsp; let valor = titulo.classList.item(1);<br>
+			&nbsp; &nbsp; &nbsp; document.write(valor);<br>
+			Lo que nos imprime la clase en la posicion 1<br><br><br>
+			<b>--Elemento.classList.contain()</b><br>
+			Nos devuelve si la clase que especificamos dentro del parentesis y en comillas existe en el elemento, si existe devuelve true, sino devuelve false, se implementa como el anterior para devolver el resultado en pantalla<br><br><br>
+			<b>--Elemento.classList.toggle()</b><br>
+			Nosotros ponemos una clase dentro del parentesis con comillas, si la clase existe en el elemento la quita y nos devuelve false, si no existe la agrega y nos devuelve true, tambien podemos agregar un parametro mas de true o false para forzar si la va a sacar o no<br><br><br>
+			<b>Elemento.classList.replace()</b><br>
+			
+
 		</p>
 
 </div>
