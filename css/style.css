@@ -1,0 +1,381 @@
+/* 3.141592 TiBO */
+
+
+body{
+    background-image: url("../images/Fondo.jpg");
+}
+
+
+
+/*-------------------------- Scrollbar ----------------------------*/
+body::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #152324;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 8px;
+
+}
+
+body::-webkit-scrollbar-button {
+    display:none;
+}
+/*------------------------ Fin Scrollbar --------------------------*/
+
+
+
+
+
+
+/*------------------------------ Fuentes ------------------------------*/
+@font-face {
+    font-family: 'LeviBrushedTema';
+   src: url('../fonts/LeviReBrushed.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NoirTemas';
+    src: url('../fonts/noir-std.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GabriolaExplicaciones';
+    src: url('../fonts/Gabriola.ttf') format('truetype');
+}
+/*------------------------------ Fin Fuentes ------------------------------*/
+
+
+
+
+
+
+
+
+/*----------------------- Boton de Mostrar/Esconder explicacion--------------------------*/
+.escondidoGeneralidades, .escondidoVariables, .escondidoConcatenar, .escondidoArrays, .escondidoIF, .escondidoWhile, .escondidoBreak, .escondidoDoWhile, .escondidoFor, .escondidoForIn, .escondidoForOf, .escondidoFunciones, .escondidoClases, .escondidoPoo, .escondidoCadena, .escondidoMetodoArray, .escondidoMath, .escondidoConsola, .escondidoDOM, .escondidoSeleccionElementos, .escondidoMetAtributos, .escondidoAtributosGlob, .escondidoAtributosInputs, .escondidoAtributosStyle, .escondidoClassList, .escondidoObModElementos, .escondidoCreaElementos, .escondidoObModChilds, .escondidoMetChild{
+    opacity: 0;
+    transition: all 0.2s;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.mostrar{
+   opacity: 1;
+   transition: all 0.9s;
+   max-height: 9999999px;
+}
+
+.botonEsconderMostrar{
+    width: 45px;
+	height: 45px;
+	background-color: transparent;  
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	border-radius: 50% ;
+	position: fixed;
+	cursor: pointer;
+	border: 4px solid transparent;
+}
+
+.botonEsconderMostrar:hover{
+    width: 45px;
+	height: 45px;
+    backdrop-filter: blur(1px);
+    background-color: rgba(255, 255, 255, 0.000001);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	border-radius: 25% ;
+	position: fixed;
+	cursor: pointer;
+	border: 1px solid transparent;
+}
+/*----------------------- Fin boton de Mostrar/Esconder explicacion--------------------------*/
+
+
+
+
+
+
+
+
+/*------------------------- Temas -------------------------*/
+    .Blur{
+    
+        backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.1);
+        margin-left: 15%;
+        margin-right: 15%;
+        padding: 5%;
+    }
+    
+    .Titulo{
+        position: relative;
+        color: white;
+        text-align: center;
+        font-family: LeviBrushedTema;
+        font-size: 62px;
+        text-shadow: 4px 4px black;
+    }
+    
+    
+    .Tema{
+        font-family: NoirTemas;
+        color: white;
+        margin-left: 50px;
+    
+    }
+    
+    
+    .Explicacion{
+        font-size: 25px;
+        font-family: GabriolaExplicaciones;
+        color: white;
+        margin-left: 65px;
+        line-height: 25px;
+    
+    }
+    
+    b{
+        text-shadow: 1px 1px black !important;
+    }
+    
+    h1, h2, p{
+        margin: 0;
+        padding: 0;
+    
+    }
+/*------------------------- Fin Temas -------------------------*/
+
+
+
+
+
+
+
+ 
+/*------------------------- Boton ir arriba -------------------------*/
+    #button-up{
+        width: 60px;
+        height: 60px;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 50% ;
+        font-size: 20px;
+        position: fixed;
+        cursor: pointer;
+        border: 4px solid transparent;
+        
+    }
+    
+    #button-up:hover{
+        background-color:#345c4b;
+        border-color: rgba(0, 0, 0, 0, 1);
+    }
+/*------------------------- Fin boton ir arriba -------------------------*/
+
+
+
+
+
+
+
+  
+/*------------------------- Boton ir abajo -------------------------*/
+    #button-down{
+        border-color: rgba(0, 0, 0, 0, 1);
+        width: 60px;
+        height: 60px;
+        background-color:transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 50% ;
+        font-size: 20px;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        cursor: pointer;
+        border: 4px solid transparent;
+    }
+    
+    #button-down:hover{	
+        background-color:#345c4b;
+        border-color: rgba(0, 0, 0, 0, 1);    
+    }
+/*------------------------- Fin boton ir abajo -------------------------*/
+
+
+
+
+
+
+
+
+/*-------------------------Parte del menu desplegable-------------------------*/
+a {
+    -webkit-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    -moz-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    -ms-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    -o-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    text-decoration: none;
+}
+
+.list {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    text-transform: uppercase;
+    position: absolute;
+    margin-left: -140px;
+    margin-top: -280px;
+    top: 55%;
+}
+
+.list a {
+    display: block;
+    color: #fff;
+}
+
+.list a:hover {
+    text-indent: 20px;
+}
+
+.list dt, .list dd {
+    text-indent: 40px;
+    line-height: 55px;
+    background: #E0FBAC;
+    margin: 0;
+    height: 55px;
+    width: 770px;
+    color: #fff;
+}
+
+.list dt {
+    -webkit-transform: translateZ(0.3px);
+    -moz-transform: translateZ(0.3px);
+    -ms-transform: translateZ(0.3px);
+    -o-transform: translateZ(0.3px);
+    transform: translateZ(0.3px);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+}
+
+.list dd {
+    border-top: 1px dashed rgba(255,255,255,0.3);
+    line-height: 35px;
+    font-size: 11px;
+    height: 35px;
+    margin: 0;
+}
+
+
+.toggle{
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    border-radius: 3px;
+
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 50px;
+    background: #2b2b2b;
+
+    background-image: linear-gradient(to right, #44A08D 0%, #093637  51%, #44A08D  100%);  
+    background-size: 200% auto;
+    transition: 0.6s;
+
+    bottom: -45%;
+    left: 45%; 
+   
+    text-align: center;
+    font-size: 12px;
+
+    position: absolute;
+    color: #fff;
+
+    width: 140px;
+
+    margin: 0 auto;
+}
+
+.toggleClic{
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    border-radius: 3px;
+
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 50px;
+
+	background-image: linear-gradient(to right, #44A08D 0%, #093637  51%, #44A08D  100%);  
+    background-size: 200% auto;
+    transition: 0.6s;   	
+
+    bottom: 40%;
+    left: 45%; 
+   
+    text-align: center;
+    font-size: 12px;
+
+    position: absolute;
+    color: #fff;
+    
+    width: 140px;
+
+    margin: 0 auto;
+}
+
+.toggleClic:hover{
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.toggle:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+
+}
+
+/* Color del menu */
+.sashimi dt, .sashimi dd, .sashimi a { background: #73C8A9; }
+.nigiri dt, .nigiri dd, .nigiri a { background: #E32551; }
+.maki dt, .maki dd, .maki a { background-color: #38977f; }
+
+.sashimi a:hover { background: #61c19e; }
+.nigiri a:hover { background: #d31b46; }
+.maki a:hover { background-color: #38af95 }
+
+.maki {
+    -webkit-transform: perspective(600px) translateZ(1px) !important;
+    -moz-transform: perspective(600px) translateZ(1px) !important;
+    -ms-transform: perspective(600px) translateZ(1px) !important;
+    -o-transform: perspective(600px) translateZ(1px) !important;
+    transform: perspective(600px) translateZ(1px) !important;
+
+    left: 30%;
+}
+/*------------------------- Fin menu desplegable -------------------------*/
+
+
+
+
+
+
+
