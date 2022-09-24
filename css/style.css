@@ -57,7 +57,7 @@ body::-webkit-scrollbar-button {
 
 
 
-/*----------------------- Boton de Mostrar/Esconder explicacion--------------------------*/
+/*----------------------- Botones de Mostrar/Esconder explicacion--------------------------*/
 .escondidoGeneralidades, .escondidoVariables, .escondidoConcatenar, .escondidoArrays, .escondidoIF, .escondidoWhile, .escondidoBreak, .escondidoDoWhile, .escondidoFor, .escondidoForIn, .escondidoForOf, .escondidoFunciones, .escondidoClases, .escondidoPoo, .escondidoCadena, .escondidoMetodoArray, .escondidoMath, .escondidoConsola, .escondidoDOM, .escondidoSeleccionElementos, .escondidoMetAtributos, .escondidoAtributosGlob, .escondidoAtributosInputs, .escondidoAtributosStyle, .escondidoClassList, .escondidoObModElementos, .escondidoCreaElementos, .escondidoObModChilds, .escondidoMetChild{
     opacity: 0;
     transition: all 0.2s;
@@ -103,14 +103,98 @@ body::-webkit-scrollbar-button {
 
 
 
+/* Bston de Siguiente 
+.siguienteBtn{
+    width: 45px;
+	height: 45px;
+	background-color: transparent;  
+	justify-content: center;
+	align-items: center;
+	color: white;
+	border-radius: 50% ;
+	position: absolute;
+	cursor: pointer;
+	border: 4px solid transparent;
+    left: 70%;
+    font-size: 40px;
+}
+
+.siguienteBtn:hover{
+    width: 45px;
+	height: 45px;
+	background-color: transparent;  
+	justify-content: center;
+	align-items: center;
+	color: white;
+	border-radius: 50% ;
+	position: absolute;
+	cursor: pointer;
+	border: 4px solid transparent;
+    left: 70%;
+    font-size: 43px;
+}
+
+
+ Fin de boton de siguiente*/
 
 
 
 
 
 /*------------------------- Temas -------------------------*/
+
+    .botonAnteriorNivel{
+        position: relative;
+        background-color: transparent;
+        border: none;
+        color:white;
+        left: 25%;
+        top: 30px;
+    }
+
+    .botonSiguienteNivel{
+        position: relative;
+        background-color: transparent;
+        border: none;
+        color:white;
+        left: 910px;
+        top: 30px;
+    }
+
+
+    .botonIndex{
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        color:#73C8A9;
+        top: 110px;
+        left: 45%;
+    }
+
+    .botonIndex2{
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        color:#73C8A9;
+        top: 110px;
+        left: 47%;
+    }
+
+    .botonIndex3{
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        color:#73C8A9;
+        top: 110px;
+        left: 49%;
+    }
+
+    .espacioArriba{
+        position: relative;
+        top: 930px; 
+    }
+
     .Blur{
-    
         backdrop-filter: blur(5px);
         background-color: rgba(255, 255, 255, 0.1);
         margin-left: 15%;
@@ -119,20 +203,22 @@ body::-webkit-scrollbar-button {
     }
     
     .Titulo{
-        position: relative;
+        position: absolute;
         color: white;
         text-align: center;
         font-family: LeviBrushedTema;
         font-size: 62px;
         text-shadow: 4px 4px black;
+        top: 10px;
+        left: 30%;
     }
     
     
     .Tema{
+        top: 50%;
         font-family: NoirTemas;
         color: white;
         margin-left: 50px;
-    
     }
     
     
@@ -142,7 +228,6 @@ body::-webkit-scrollbar-button {
         color: white;
         margin-left: 65px;
         line-height: 25px;
-    
     }
     
     b{
@@ -152,7 +237,6 @@ body::-webkit-scrollbar-button {
     h1, h2, p{
         margin: 0;
         padding: 0;
-    
     }
 /*------------------------- Fin Temas -------------------------*/
 
@@ -165,6 +249,7 @@ body::-webkit-scrollbar-button {
  
 /*------------------------- Boton ir arriba -------------------------*/
     #button-up{
+        top: 30px;
         width: 60px;
         height: 60px;
         background-color: transparent;
@@ -177,12 +262,13 @@ body::-webkit-scrollbar-button {
         position: fixed;
         cursor: pointer;
         border: 4px solid transparent;
-        
+        z-index: 100;
     }
     
     #button-up:hover{
         background-color:#345c4b;
         border-color: rgba(0, 0, 0, 0, 1);
+        z-index: 100;
     }
 /*------------------------- Fin boton ir arriba -------------------------*/
 
@@ -195,6 +281,7 @@ body::-webkit-scrollbar-button {
   
 /*------------------------- Boton ir abajo -------------------------*/
     #button-down{
+        z-index: 100;
         border-color: rgba(0, 0, 0, 0, 1);
         width: 60px;
         height: 60px;
@@ -213,6 +300,7 @@ body::-webkit-scrollbar-button {
     }
     
     #button-down:hover{	
+        z-index: 100;
         background-color:#345c4b;
         border-color: rgba(0, 0, 0, 0, 1);    
     }
@@ -241,11 +329,11 @@ a {
     -ms-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     position: absolute;
     margin-left: -140px;
     margin-top: -280px;
-    top: 55%;
+    top: 72%;
 }
 
 .list a {
@@ -262,7 +350,7 @@ a {
     line-height: 55px;
     background: #E0FBAC;
     margin: 0;
-    height: 55px;
+    height: 65px;
     width: 770px;
     color: #fff;
 }
@@ -274,15 +362,17 @@ a {
     -o-transform: translateZ(0.3px);
     transform: translateZ(0.3px);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-size: 15px;
+    font-size: 35px;
+    font-family:  GabriolaExplicaciones;
 }
 
 .list dd {
     border-top: 1px dashed rgba(255,255,255,0.3);
     line-height: 35px;
-    font-size: 11px;
+    font-size: 24px;
     height: 35px;
     margin: 0;
+    font-family:  NoirTemas;
 }
 
 
@@ -352,6 +442,8 @@ a {
     text-decoration: none;
 
 }
+
+
 
 /* Color del menu */
 .sashimi dt, .sashimi dd, .sashimi a { background: #73C8A9; }

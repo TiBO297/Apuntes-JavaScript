@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+	<!-- 3.141592 TiBO -->
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="images/js.ico"/>
+
+	<title>Ayuda JavaScript</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://kit.fontawesome.com/619056049f.js" crossorigin="anonymous"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script src="js/makisu.js"></script>
+</head>
+
+<body>
+
+	 <!-- -------------------------------- Botones Arriba/Abajo ---------------------------------->
+	<!-- Los botones deben ir aqui por que no se pueden definir despues de llamar el archivo js -->
+	<div id="button-up">
+        <i class="fa-solid fa-caret-up"></i>
+    </div>
+    
+            <!-- Boton de ir abajo -->
+     <div id="button-down" onclick="scrollDown()">
+       	<i class="fa-solid fa-caret-down"></i>
+    </div>
+	 <!-- ------------------------------ Fin Botones Arriba/Abajo -------------------------------->
+
+    <section class="demo">
+        <dl class="list maki">
+            <dt>Temas:</dt>
+            <dd><a href="index.html#Generalidades">1. Tema 1</a></dd>
+            <dd><a href="">2. Tema 2</a></dd>
+            <dd><a href="">3. Tema 3</a></dd>
+            <dd><a href="">4. Tema 4</a></dd>
+            <dd><a href="">5. Tema 5</a></dd>
+            <dd><a href="">6. Terma 6</a></dd>
+            <dd><a href="">7. Tema 7</a></dd>
+            <dd><a href="">8. Tema 8</a></dd>
+            <dd><a href="">9. Tema 9</a></dd>
+            <dd><a href="">10. Tema 10</a></dd>
+			<dd><a href="">11. Tema 11</a></dd>
+            <dd><a href="">12. Tema 12</a></dd>
+            <dd><a href="">13. Tema 13</a></dd>
+            <dd><a href="">14. Tema 14</a></dd>
+            <dd><a href="">15. Tema 15</a></dd>
+            <dd><a href="">16. Tema 16</a></dd>
+        </dl>
+
+        <a href="#" class="toggle">Contraer temas</a>
+    </section>
+    
+    <script>
+        // The `enabled` flag will be `false` if CSS 3D isn't available
+        if ( $.fn.makisu.enabled ) {
+
+            var $sashimi = $( '.sashimi' );
+            var $nigiri = $( '.nigiri' );
+            var $maki = $( '.maki' );
+
+            // Create Makisus
+
+            $nigiri.makisu({
+                selector: 'dd',
+                overlap: 0.85,
+                speed: 0.3
+            });
+
+            $maki.makisu({
+                selector: 'dd',
+                overlap: 0.8,
+                speed: 0.51
+            });
+
+            $sashimi.makisu({
+                selector: 'dd',
+                overlap: 0.2,
+                speed: 0.3
+            });
+
+            // Open all
+            
+            $( '.list' ).makisu( 'open' );
+
+            // Toggle on click
+
+            $( '.toggle' ).on( 'click', function() {
+                $( '.list' ).makisu( 'toggle' );
+            });
+
+            // Disable all links
+
+            $( '.demo a' ).click( function( event ) {
+               
+            });
+
+        } else {
+
+            $( '.warning' ).show();
+        }
+
+    </script>
+
+
+<h1 class="Titulo">JavaScript Nivel 2</h1>
+
+<button class="botonAnteriorNivel fa-solid fa-angles-left" onclick="location.href='/index.html';"></button>
+<button class="botonSiguienteNivel fa-solid fa-angles-right" onclick="location.href='/indexCap2.html';"></button>  
+
+<button class="botonIndex fa-regular fa-circle" onclick="location.href='/index.html';"></button>
+<button class="botonIndex2 fa-solid fa-circle" onclick="location.href='/indexCap2.html';"></button>
+<button class="botonIndex3 fa-regular fa-circle" onclick="location.href='#';"></button>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="Blur">
+	<button class="btnGeneralidades botonEsconderMostrar fa-solid fa-angle-down"></button>
+	<h1 class="Tema" id="Generalidades">1. Generalidades</h1>
+	<p class="Explicacion escondidoGeneralidades">-Para asignar un valor es con <b>=</b>
+		<br>
+		-Para decir que es 'igual a' es <b>==</b>
+		<br>
+		-Para imprimir algo en pantalla es <b>document.write("mensaje")</b>
+		<br>
+		-Para mostrar un cuadrito arriba con informaci&oacute;n es <b>alert("Mensaje")</b>
+		<br>
+		-Para mostrar el mismo cuadrito del alert pero para que ingrese informaci&oacute;n es <b>prompt("Escribir mensaje:")</b>
+		<br>
+		-Para cambiar el valor de String a Int es con <b>variable = parseInt(variable);</b> o con <b>let num = Number(str);</b> 
+		<br>
+		-Con <b>typeof variable</b> muestra el tipo de variable si es number, string o cualquier otro
+		<br>
+		-Para asignar cuantos decimales tiene un Float es con numObj.toFixed([digitos])<br>
+		-Es keysensitive, significa que diferencia entre mayuscula y minuscula
+	</p>
+</div><br>
+
+
+<div class="Blur">	
+	<button class="btnArrays botonEsconderMostrar fa-solid fa-angle-down"></button>
+	<h1 class="Tema" id="Arrays">2. Arrays</h1>
+	<p class="Explicacion escondidoArrays">Es como una variable pero podemos guardar muchas cosas en el<br>
+	Por ejemplo: <br>
+		<b> &nbsp; &nbsp; &nbsp; let frutas = ["pera", "manzana", "fresa"];</b><br><br>
+		Podemos mostrar todos los elementos, o individuales asi:<br>
+		<b>document.write(frutas[1]);<br>
+		</b>
+		Que imprime: <b>manzana</b> por que empieza desde el cero
+	<br><br><br>
+	Tambien existen Arrays Asociativos con los que identificamos los nombres de los elementos<br>
+	Ejemplo:<br>
+		<b>let Computadora = {<br>
+			&nbsp; &nbsp; &nbsp; nombre: "TiBOPC",<br>
+			&nbsp; &nbsp; &nbsp; procesador: "intel Core i7",<br>
+			&nbsp; &nbsp; &nbsp; RAM: "16 GB",<br>
+			&nbsp; &nbsp; &nbsp; Espacio: "1TB",<br>
+			&nbsp; &nbsp; &nbsp; Lectora: "DVD"<br>
+			};<br><br>
+		document.write(Computadora["nombre"])<br>
+		</b>
+		Que imprime: <b>TiBOPC</b> por que identificamos que "nombre" tenia ese valor
+	</p>
+</div><br>
+
+
+
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

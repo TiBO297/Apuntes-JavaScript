@@ -1,806 +1,791 @@
 <!doctype html>
 <html>
 <head>
-	<!-- 3.141592 TiBO -->
-	<link href="css/style.css" rel="stylesheet" type="text/css">
-	<link rel="icon" href="images/js.ico"/>
 
+	<!-- 3.141592 TiBO -->
 	<title>Ayuda JavaScript</title>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link rel="icon" href="images/js.ico"/>
+
+	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<script src="https://kit.fontawesome.com/619056049f.js" crossorigin="anonymous"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 	<script src="js/makisu.js"></script>
+
+
 </head>
 
 <body>
-
-	 <!-- -------------------------------- Botones Arriba/Abajo ---------------------------------->
-	<!-- Los botones deben ir aqui por que no se pueden definir despues de llamar el archivo js -->
+<!-- Botones Arriba/Abajo -->
 	<div id="button-up">
-        <i class="fa-solid fa-caret-up"></i>
-    </div>
+		<i class="fa-solid fa-caret-up"></i>
+	</div>
     
-            <!-- Boton de ir abajo -->
-     <div id="button-down" onclick="scrollDown()">
-       	<i class="fa-solid fa-caret-down"></i>
-    </div>
-	 <!-- ------------------------------ Fin Botones Arriba/Abajo -------------------------------->
+	<div id="button-down" onclick="scrollDown()">
+		<i class="fa-solid fa-caret-down"></i>
+	</div>
+<!-- Fin Botones Arriba/Abajo -->
 
-    <section class="demo">
-        <dl class="list maki">
-            <dt>Temas</dt>
-            <dd><a href="index.html#Generalidades">1. Generalidades</a></dd>
-            <dd><a href="index.html#Arrays">2. Arrays</a></dd>
-            <dd><a href="index.html#EstructuraIf">3. Estructura IF</a></dd>
-            <dd><a href="index.html#EstructuraWhile">4. Estructura While</a></dd>
-            <dd><a href="index.html#EstructuraDoWhile">5. Estructura Do While</a></dd>
-            <dd><a href="index.html#EstructuraFor">6. Estructura For</a></dd>
-            <dd><a href="index.html#ForIn">7. For In</a></dd>
-            <dd><a href="index.html#ForOf">8. For Of</a></dd>
-            <dd><a href="index.html#Funciones">9.Funciones</a></dd>
-            <dd><a href="index.html#DefinicionDeClases">10. Definicion de Clases</a></dd>
+
+<!-- Lista de Temas -->
+	<section class="demo">
+		<dl class="list maki">
+			<dt>Temas:</dt>
+			<dd><a href="index.html#Generalidades">1. Generalidades</a></dd>
+			<dd><a href="index.html#Arrays">2. Arrays</a></dd>
+			<dd><a href="index.html#EstructuraIf">3. Estructura IF</a></dd>
+			<dd><a href="index.html#EstructuraWhile">4. Estructura While</a></dd>
+			<dd><a href="index.html#EstructuraDoWhile">5. Estructura Do While</a></dd>
+			<dd><a href="index.html#EstructuraFor">6. Estructura For</a></dd>
+			<dd><a href="index.html#ForIn">7. For In</a></dd>
+			<dd><a href="index.html#ForOf">8. For Of</a></dd>
+			<dd><a href="index.html#Funciones">9. Funciones</a></dd>
+			<dd><a href="index.html#DefinicionDeClases">10. Definicion de Clases</a></dd>
 			<dd><a href="index.html#ConceptosDePOO">11. Conceptos De Poo</a></dd>
-            <dd><a href="index.html#MetodosDeCadena">12. Metodos de Cadena</a></dd>
-            <dd><a href="index.html#MetodosDeArrays">13. Metodos de Arrays</a></dd>
-            <dd><a href="index.html#FuncionesDeMath">14. Funciones de Math</a></dd>
-            <dd><a href="index.html#Consola">15. Consola</a></dd>
-            <dd><a href="index.html#DOM">16. DOM</a></dd>
-            <dd><a href="index.html#">17. Tema n</a></dd>
-            <dd><a href="index.html#">18. Tema n</a></dd>
-            <dd><a href="index.html#">19. Tema n</a></dd>
-        </dl>
+			<dd><a href="index.html#MetodosDeCadena">12. Metodos de Cadena</a></dd>
+			<dd><a href="index.html#MetodosDeArrays">13. Metodos de Arrays</a></dd>
+			<dd><a href="index.html#FuncionesDeMath">14. Funciones de Math</a></dd>
+			<dd><a href="index.html#Consola">15. Consola</a></dd>
+			<dd><a href="index.html#DOM">16. DOM</a></dd>
+		</dl>
 
-        <a href="#" class="toggle">Contraer temas</a>
-    </section>
-    
-    <script>
-        // The `enabled` flag will be `false` if CSS 3D isn't available
-        if ( $.fn.makisu.enabled ) {
+		<a href="#" class="toggle">Contraer temas</a>
 
-            var $sashimi = $( '.sashimi' );
-            var $nigiri = $( '.nigiri' );
-            var $maki = $( '.maki' );
-
-            // Create Makisus
-
-            $nigiri.makisu({
-                selector: 'dd',
-                overlap: 0.85,
-                speed: 0.3
-            });
-
-            $maki.makisu({
-                selector: 'dd',
-                overlap: 0.8,
-                speed: 0.51
-            });
-
-            $sashimi.makisu({
-                selector: 'dd',
-                overlap: 0.2,
-                speed: 0.3
-            });
-
-            // Open all
-            
-            $( '.list' ).makisu( 'open' );
-
-            // Toggle on click
-
-            $( '.toggle' ).on( 'click', function() {
-                $( '.list' ).makisu( 'toggle' );
-            });
-
-            // Disable all links
-
-            $( '.demo a' ).click( function( event ) {
-               
-            });
-
-        } else {
-
-            $( '.warning' ).show();
-        }
-
-    </script>
+   	</section>
+<!-- Fin Lista de Temas -->
 
 
-<h1 class="Titulo">JavaScript</h1>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-<div class="Blur">
-	<button class="btnGeneralidades botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="Generalidades">1. Generalidades</h1>
-	<p class="Explicacion escondidoGeneralidades">-Para asignar un valor es con <b>=</b>
-		<br>
-		-Para decir que es 'igual a' es <b>==</b>
-		<br>
-		-Para imprimir algo en pantalla es <b>document.write("mensaje")</b>
-		<br>
-		-Para mostrar un cuadrito arriba con informaci&oacute;n es <b>alert("Mensaje")</b>
-		<br>
-		-Para mostrar el mismo cuadrito del alert pero para que ingrese informaci&oacute;n es <b>prompt("Escribir mensaje:")</b>
-		<br>
-		-Para cambiar el valor de String a Int es con <b>variable = parseInt(variable);</b> o con <b>let num = Number(str);</b> 
-		<br>
-		-Con <b>typeof variable</b> muestra el tipo de variable si es number, string o cualquier otro
-		<br>
-		-Para asignar cuantos decimales tiene un Float es con numObj.toFixed([digitos])<br>
-		-Es keysensitive, significa que diferencia entre mayuscula y minuscula
-	</p><br><br><br>
-
-	<button class="btnVariables botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema">1.1 Para definir variables</h1>
-	<p class="Explicacion escondidoVariables">Se puede definir con <b>Let, const y var</b>
-		<br>
-		Ejemplo:
-		<br>
-		<b>&nbsp; &nbsp; &nbsp; Let nombreVariable</b>
-	</p><br><br><br>
-
-	<button class="btnConcatenar botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema">1.2 Para concatenar</h1>
-	<p class="Explicacion escondidoConcatenar">Se puede hacer con el simbolo <b>+</b>
-		<br>
-		Pero tambien se puede haciendo esto:
-		<br>
-		<b>`Este es un texto ${variable} concatenado`</b>
-	</p>
-</div><br>
+	<!-- Titulo -->
+		<h1 class="Titulo">JavaScript Nivel 1</h1>
+	<!-- Fin Titulo -->
 
 
+<!-- Botones para ir al nivel siguiente o anterior -->
+	<button class="botonAnteriorNivel fa-solid fa-angles-left" onclick="location.href='/index.html';"></button>
+	<button class="botonSiguienteNivel fa-solid fa-angles-right" onclick="location.href='/indexCap2.html';"></button>   
+
+	<button class="botonIndex fa-solid fa-circle" onclick="location.href='/index.html';"></button>
+	<button class="botonIndex2 fa-regular fa-circle" onclick="location.href='/indexCap2.html';"></button>
+	<button class="botonIndex3 fa-regular fa-circle" onclick="location.href='#';"></button>
+<!-- Fin Botones para ir al nivel siguiente o anterior -->
 
 
-<div class="Blur">	
-	<button class="btnArrays botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="Arrays">2. Arrays</h1>
-	<p class="Explicacion escondidoArrays">Es como una variable pero podemos guardar muchas cosas en el<br>
-	Por ejemplo: <br>
-		<b> &nbsp; &nbsp; &nbsp; let frutas = ["pera", "manzana", "fresa"];</b><br><br>
-		Podemos mostrar todos los elementos, o individuales asi:<br>
-		<b>document.write(frutas[1]);<br>
-		</b>
-		Que imprime: <b>manzana</b> por que empieza desde el cero
-	<br><br><br>
-	Tambien existen Arrays Asociativos con los que identificamos los nombres de los elementos<br>
-	Ejemplo:<br>
-		<b>let Computadora = {<br>
-			&nbsp; &nbsp; &nbsp; nombre: "TiBOPC",<br>
-			&nbsp; &nbsp; &nbsp; procesador: "intel Core i7",<br>
-			&nbsp; &nbsp; &nbsp; RAM: "16 GB",<br>
-			&nbsp; &nbsp; &nbsp; Espacio: "1TB",<br>
-			&nbsp; &nbsp; &nbsp; Lectora: "DVD"<br>
-			};<br><br>
-		document.write(Computadora["nombre"])<br>
-		</b>
-		Que imprime: <b>TiBOPC</b> por que identificamos que "nombre" tenia ese valor
-	</p>
-</div><br>
+<!-- Tema 1 -->
+<div class="espacioArriba">
+		<div class="Blur">
+			<button class="btnGeneralidades botonEsconderMostrar fa-solid fa-angle-down"></button>
+			<h1 class="Tema" id="Generalidades">1. Generalidades</h1>
+			<p class="Explicacion escondidoGeneralidades">-Para asignar un valor es con <b>=</b>
+				<br>
+				-Para decir que es 'igual a' es <b>==</b>
+				<br>
+				-Para imprimir algo en pantalla es <b>document.write("mensaje")</b>
+				<br>
+				-Para mostrar un cuadrito arriba con informaci&oacute;n es <b>alert("Mensaje")</b>
+				<br>
+				-Para mostrar el mismo cuadrito del alert pero para que ingrese informaci&oacute;n es <b>prompt("Escribir mensaje:")</b>
+				<br>
+				-Para cambiar el valor de String a Int es con <b>variable = parseInt(variable);</b> o con <b>let num = Number(str);</b> 
+				<br>
+				-Con <b>typeof variable</b> muestra el tipo de variable si es number, string o cualquier otro
+				<br>
+				-Para asignar cuantos decimales tiene un Float es con numObj.toFixed([digitos])<br>
+				-Es keysensitive, significa que diferencia entre mayuscula y minuscula
+			</p><br><br><br>
 
-
-
-
-<div class="Blur">
-	<button class="btnIF botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="EstructuraIf">3. Estructura IF</h1>
-	<p class="Explicacion escondidoIF"> 
-	Si se cumple la condición se ejecutará lo que haya adentro<br><br>
-	Ejemplo 1: <br>
-								<b>if(variable == valor){<br>
-								&nbsp; &nbsp; &nbsp; Se ejecuta codigo<br>
-								}<br></b>
-								<br><br>
-	Ejemplo 2 con else: <br>
-								<b>if(variable > valor){<br>
-								&nbsp; &nbsp; &nbsp; Se ejecuta codigo<br>
-								}<br>
-								else{<br>
-								&nbsp; &nbsp; &nbsp; Se ejecuta otro codigo<br>
-								}</b>
-	</p>
-</div><br>
-
-
-<div class="Blur">
-	<button class="btnWhile botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="EstructuraWhile">4. Estructura While</h1>
-	<p class="Explicacion escondidoWhile">Mientras se cumpla la condición se ejecutará el codigo que haya adentro<br>
-		Ejemplo:<br><br>
-		<b>
-			let numero = 1;<br><br>
-			while (numero < 6){<br>
-			&nbsp; &nbsp; &nbsp; numero++;<br>
-			&nbsp; &nbsp; &nbsp; document.write(numero);<br>
-			}
-		</b>
-	</p>
-<br><br><br>
-
-	<button class="btnBreak botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="EstructuraBreak">4.1 Break para el While</h1>
-	<p class="Explicacion escondidoBreak">Sirve para parar el bucle<br>
-		Sirve para todas las estructuras<br>
-		Ejemplo:<br><br>
-		<b>
-			let numero = 1;<br><br>
-			while (numero < 1000){<br>
-			&nbsp; &nbsp; &nbsp; numero++;<br>
-			&nbsp; &nbsp; &nbsp; document.write(numero);<br>
-			&nbsp; &nbsp; &nbsp; if (numero == 10){<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break <br>
-			&nbsp; &nbsp; &nbsp;}<br>
-			}
-		</b>
-	</p>
-</div>	<br>
-
-
-<div class="Blur">
-	<button class="btnDoWhile botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="EstructuraDoWhile">5. Estructura Do While</h1>
-	<p class="Explicacion escondidoDoWhile">Se ejecuta el código primero, luego pregunta una condición, y, si se cumple<br>
-	se vuelve a ejecutar, y así hasta que la condición ya no se cumpla<br><br>
-	Ejemplo: <br><br>
-	<b>
-			let numero = 1;<br><br>
-			do{<br>
-			&nbsp; &nbsp; &nbsp; numero++;<br>
-			&nbsp; &nbsp; &nbsp; document.write(numero);<br>
-			} while (numero < 6){<br>
-		</b>
-	</p>
-</div><br>
-
-
-<div class="Blur">
-	<button class="btnFor botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="EstructuraFor">6. Estructura For</h1>
-	<p class="Explicacion escondidoFor">
-		Nosotros le decimos cuantas veces se va a repetir el codigo<br>
-		Ejemplo:<br><br>
-		<b>
-			for(let i = 0; i < 20; i++){<br>
-			&nbsp; &nbsp; &nbsp; document.write(i);<br>
-			}
-		</b>
-	</p>
-</div><br>
-
-
-
-<div class="Blur">
-	<button class="btnForIn botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="ForIn">7. For in</h1>
-	<p class="Explicacion escondidoForIn">
-		Nos devuelve la posición de los elementos del Array<br>
-		Ejemplo: <br><br>
-		<b>
-		let frutas = ["pera", "manzana", "fresa"];<br>
-		for (fruta in frutas){<br>
-			&nbsp; &nbsp; &nbsp; document.write(fruta);<br>
-		} </b><br><br>
-		Que imprime: <b>0, 1, 2</b>
-	</p>
-</div><br>
-
-
-<div class="Blur">
-	<button class="btnForOf botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="ForOf">8. For of</h1>
-	<p class="Explicacion escondidoForOf">
-		Nos devuelve los elementos del Array<br>
-		Ejemplo: <br><br>
-		<b>
-		let frutas = ["pera", "manzana", "fresa"];<br>
-		for (fruta of frutas){<br>
-			&nbsp; &nbsp; &nbsp; document.write(fruta);<br>
-		} </b><br><br>
-		Que imprime: <b>pera, manzana, fresa</b>
-	</p>
-</div><br>
-
-
-
-<div class="Blur">
-	<button class="btnFunciones botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="Funciones">9. Funciones</h1>
-	<p class="Explicacion escondidoFunciones">Son porciones de codigo que se utilizan para realizar una accion con la posibilidad de ejecutarlo despues<br><br>
-		Ejemplo 1: con la palabra function<br>
-		<b>
-			&nbsp; &nbsp; function saludar(){<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.write("Hola!");<br>
-			&nbsp; &nbsp; }<br><br>
-			saludar();<br><br><br>
-		</b>
-
-		Ejemplo 2: con la palabra function devolviendo un resultado<br>
-		<b>
-			&nbsp; &nbsp; function suma(num1, num2){<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let res = num1 + num2;<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return res;<br>
-			&nbsp; &nbsp; }<br><br>
-			let resultado = suma(20, 25);<br>
-			document.write(resultado)
-		</b>
-		<br><br><br>
-		Ejemplo 2: como flecha<br>
-		<b>
-			&nbsp; &nbsp;const saludar(nombre)=>{<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let frase = `Hola ${nombre} como estas`;<br>
-			&nbsp; &nbsp; }<br>
+		<button class="btnVariables botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema">1.1 Para definir variables</h1>
+		<p class="Explicacion escondidoVariables">Se puede definir con <b>Let, const y var</b>
 			<br>
-			saludar("Pedro");<br>
-		</b>
-	</p>
-</div>	<br>
+			Ejemplo:
+			<br>
+			<b>&nbsp; &nbsp; &nbsp; Let nombreVariable</b>
+		</p><br><br><br>
 
-
-<div class="Blur">
-	<button class="btnClases botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="DefinicionDeClases">10. Definición de Clases</h1>
-	<p class="Explicacion escondidoClases">De programación orientada a objetos, sirve para crear objetos definiendo los parametros, metodos y propiedades de estos objetos<br><br>
-	
-		Ejemplo 1: Definimos la clase, creamos el objeto y mostramos una propiedad<br>
-		<b>
-			&nbsp; &nbsp;class Animal {<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; constructor(especie, edad, color){<br>
-			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.especie = especie;<br>
-			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.edad = edad;<br>
-			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.color = color;<br>
-			&nbsp; &nbsp; &nbsp; &nbsp;}<br>
-			&nbsp; &nbsp;}<br><br>
-			const perro = new Animal("perro", 5, "café");<br>
-			document.write("perro.color")
-		</b>
-		<br><br><br>
-		Ejemplo 2: Creamos la clase, creamos tres objetos, creamos un metodo y mostramos el metodo por cada objeto con sus propiedades<br>
-		OJO: <b>LAS FUNCIONES FLECHA NO PUEDEN SER USADAS PARA DEFINIR UN METODO</b><br><br>
-		<b>
-				&nbsp; &nbsp;class Animal {<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; constructor(especie, edad, color){<br>
-			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.especie = especie;<br>
-			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.edad = edad;<br>
-			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.color = color;<br>
-			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.info = `Soy ${this.especie}, tengo ${this.edad} años y soy de color ${this.color}`;<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; }<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; verInfo(){<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.write(this.info);<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; }<br>
-			&nbsp; &nbsp;}<br><br>
-			const perro = new Animal("perro", 5, "café");<br>
-			const gato = new Animal("gato", 3, "blanco");<br>
-			const pajaro = new Animal("pajaro", 4, "verde");<br><br>
-			perro.verInfo( );<br>
-			gato.verInfo( );<br>
-			pajaro.verInfo( );<br>
-		</b>
-	</p>
-</div>	<br>
-
-
-<div class="Blur">
-	<button class="btnPoo botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="ConceptosDePOO">11. Conceptos de POO</h1>
-	<p class="Explicacion escondidoPoo">Es un paradigma de programación asi como otros, que se basa en, como su nombre lo indica, crear objetos<br>
-		Tiene algunas caracteristicas como:<br>
-		<b>--Abstracción:</b> Intentar reducir el objeto a sus componentes basicos, por ejemplo, si tenemos un perro, no decimos tamaño de la cabeza, color de la cola, etc<br>
-		<b>--Modularidad:</b> Resolver un problema grande diviviendolo por partes<br>
-		<b>--Encapsulamiento:</b> Hacer que todos los datos sean privados, encapsular los datos<br>
-		<b>--Polimorfismo:</b> Ver como un objeto se comporta diferente ante un metodo, por ejemplo, si tengo el metodo caminar, un perro va a caminar diferente que un pajaro por las propiedades que tiene<br>
-		<b>--Herencia:</b> Sirve para agregarle mas propiedades o metodos a una clase, heredando cosas de la clase principal<br>
-		Ejemplo de Herencia:<br><br>
-		<b>
-			&nbsp; &nbsp; class Perro <i>extends</i> Animal{<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; constructor(especie, edad, color, raza){<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; super(especie, edad, color);<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.raza = raza;<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; } <br>
-			&nbsp; &nbsp; }<br><br>
-			const perro = new Perro("perro", 7, "negro", "Pastor aleman");<br><br>
-		</b>
-		Y ahora puede tener los metodos de la clase Animal, y los parametros que puso en super<br><br>
-		<b>--Metodos estaticos:</b> Son los metodos de una clase que se pueden utilizar antes de crear un objeto o que no necesitan que el objeto se haya creado para poder usarse<br>
-		Ejemplo:<br>
-		<b>
-			&nbsp; &nbsp; class Perro <i>extends</i> Animal{<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; constructor(especie, edad, color, raza){<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; super(especie, edad, color);<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.raza = raza;<br>
-			&nbsp; &nbsp; &nbsp; &nbsp;}<br>
-			&nbsp; &nbsp; &nbsp; static ladrar( ){<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert("Wof"); <br>
-			&nbsp; &nbsp; &nbsp; }<br>
-			&nbsp; &nbsp; }<br><br>
-			&nbsp; &nbsp; Perro.ladrar( );<br>
-		</b>
-		Como podemos ver, la clase Perro, puede usar el metodo static sin haber creado el objeto por que no utiliza ningun parametro
-		<br><br><br>
-		<b>--Metodo Get y Set:</b> <br>
-		Get se utiliza para traer el valor de un parametro y set para asignarlo<br>
-		Ejemplo:<br><br>
-		<b>
-			&nbsp; &nbsp; class Perro <i>extends</i> Animal{<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; constructor(especie, edad, color, raza){<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; super(especie, edad, color);<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.raza = raza;<br>
-			&nbsp; &nbsp; &nbsp; &nbsp;}<br><br>
-
-			&nbsp; &nbsp; &nbsp; set setRaza(newRaza){<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.raza = newRaza; <br>
-			&nbsp; &nbsp; &nbsp; }<br><br>
-			&nbsp; &nbsp; &nbsp; get getRaza( ){<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return this.raza; <br>
-			&nbsp; &nbsp; &nbsp; }<br>
-			&nbsp; &nbsp; }<br><br>
-			&nbsp; &nbsp; perro.setRaza = "Pedro"; <br>
-			&nbsp; &nbsp; document.write(perro.getRaza);
-			</b><br><br>
-		Esto imprime la raza pedro por que la modificamos con set y trajimos el valor con Get
-
-	</p>
-</div> <br>
-
-
-
-
-<div class="Blur">
-<button class="btnCadena botonEsconderMostrar fa-solid fa-angle-down"></button>
-<h1 class="Tema" id="MetodosDeCadena">12. Metodos de cadena</h1>	
-<p class="Explicacion escondidoCadena">
-	Son metodos que se pueden utilizar para modificar las cadenas de texto.<br><br>
-	<b>----Concat( )----</b><br>
-	Junta dos o mas cadenas y las retorna.<br>
-	Ejemplo:<br>
-	<b>
-	&nbsp; &nbsp; &nbsp; let cadena = "cadena 1";<br>
-	&nbsp; &nbsp; &nbsp; let cadena2 = "cadena 2";<br><br>
-	&nbsp; &nbsp; &nbsp; resultado = cadena.concat(cadena2);<br><br>
-	&nbsp; &nbsp; &nbsp; document.write(resultado);
-	</b><br><br><br><br>
-	<b>----startsWith( ) y endsWith( )----</b><br>
-	Si una cadena empieza o termina con los caracteres de otra cadena devuelve true, sino false<br>
-	Ejemplo:<br>
-	<b>
-	&nbsp; &nbsp; &nbsp; let cadena = "cadena de prueba";<br>
-	&nbsp; &nbsp; &nbsp; let cadena2 = "cadena";<br><br>
-	&nbsp; &nbsp; &nbsp; resultado = cadena.startsWith(cadena2);<br><br>
-	&nbsp; &nbsp; &nbsp; document.write(resultado);
-	</b><br>
-	Esto devuelve <b>True</b> en pantalla, por que si empieza con esa cadena, con endsWith devuelve false, por que no temina asi.
-	<br><br><br><br>
-	<b>----includes----</b><br>
-	Si una cadena se encuentra (en cualquier parte) dentro de otra cadena devuelve true, sino false<br><br><br>
-	<b>----indexOf y lastIndexOF----</b>
-	<br>
-	Devuelve el indice del primer o ultimo caracter de la cadena, si no existe, devuelve -1<br>
-	Ejemplo:<br>
-	<b>
-	&nbsp; &nbsp; &nbsp; let cadena = "cadena de prueba si";<br>
-	&nbsp; &nbsp; &nbsp; let cadena2 = "prueba";<br><br>
-	&nbsp; &nbsp; &nbsp; resultado = cadena.indexOf(cadena2);<br><br>
-	&nbsp; &nbsp; &nbsp; document.write(resultado);
-	</b><br>
-	Esto devuelve <b>11</b> en pantalla, por que el primer caracter de la cadena, la "p", está en la posicion 11<br>si fuera lastIndexOf( ) sería <b>16</b> por que es el indice del ultimo caracter de la cadena
-	<br><br><br><br>
-	<b>----padStart( ) y padEnd( )----</b><br>
-	Rellena la cadena al principio o final con los caracteres deseados.<br>
-	Ejemplo:<br>
-	<b>
-	&nbsp; &nbsp; &nbsp; let cadena = "abc";<br>
-	&nbsp; &nbsp; &nbsp; let cadena2 = "";<br><br>
-	&nbsp; &nbsp; &nbsp; resultado = cadena.padStart(10, "12");<br><br>
-	&nbsp; &nbsp; &nbsp; document.write(resultado);
-	</b><br><br>
-	Esto devuelve <b>1212121abc</b> en pantalla, se agregan los necesesarios "12" para completar los 10 caracteres que se definieron, aunque falte uno se pone para llegar a 10, si fuera el padEnd: <b>abc1212121</b><br><br><br><br>
-	<b>----repeat( )----</b><br>
-	Devuelve la misma cadena pero repetida la cantidad de veces que deseamos<br>
-	Ejemplo: <b>abcabcabc</b> si escribimos al ejemplo de arriba <b>resultado = cadena.repeat(3);</b><br><br><br><br>
-	<b>----split( )----</b><br> Divide la cadena en un array, desde donde nosotros le indicamos<br>
-	Ejemplo: <br>
-	<b>
-	&nbsp; &nbsp; &nbsp; let cadena = "Hola como estas";<br>
-	&nbsp; &nbsp; &nbsp; resultado = cadena.split("como");<br><br>
-	&nbsp; &nbsp; &nbsp; document.write(resultado[0]);
-	</b><br><br>	
-	Esto devuelve <b>Hola</b> en pantalla, por que separamos desde donde nosotros le indicamos <br>
-	el <b>como</b> se elimina<br>
-	en <b>resultado[1]</b> está el <b>estas</b><br> y si pusieramos solo un espacio, separa esa cadena en tres partes por los tres espacios: [Hola,como,estas]<br><br><br><br>
-	<b>----substring( )-----</b><br> Nos retorna un pedazo de la cadena empezando y terminando desde donde nosotros deseamos<br>	Ejemplo: <br>
-	<b>
-	&nbsp; &nbsp; &nbsp; let cadena = "ABCDEFG";<br>
-	&nbsp; &nbsp; &nbsp; resultado = cadena.substring(2,4);<br><br>
-	&nbsp; &nbsp; &nbsp; document.write(resultado);
-	</b><br><br>
-	Esto devuelve <b>CD</b> en pantalla, ya que toma la posicion 2 y 3 porque OJO toma el indice del inicio pero no el del final<br><br><br><br>
-	<b>----toUpperCase( )</b> y  <b>toLowerCase( )----<br></b> Pasa la cadena de minuscula a mayuscula y viceversa<br><br><br><br>
-	<b>----toString( )----</b><br> Pasa a String<br><br><br><br>
-	<b>----trim( ), trimStart( ) y trimEnd( )----</b><br> Quita los espacios al inicio y al final de una cadena, solo los espacios del inicio o solo los del final respectivamente.<br>
-	
-</p>
-</div> <br>
-
-
-<div class="Blur">
-	<button class="btnMetodoArray botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="MetodosDeArrays">13. Metodos de Arrays</h1> <br>
-	<p class="Explicacion escondidoMetodoArray">
-		----Transformadores----<br><br>
-		<b>--Pop( ) :</b> Elimina el ultimo elemento de un array y lo devuelve<br>
-		Ejemplo:<br>
-		<b>
-			&nbsp; &nbsp; &nbsp; let nombres = ["pedro", "maria", "jorge"];<br>
-			&nbsp; &nbsp; &nbsp; let resultado = nombres.pop();<br><br>
-			&nbsp; &nbsp; &nbsp; document.write(nombres);<br><br>
-		</b>
-		Aqui muestra <b>jorge</b> por que fue el que eliminó por ser el ultimo elemento del array<br><br><br><br>
-		<b>--shift( ) :</b> Elimina el primer elemento de un array y lo devuelve, asi como el anterior.<br><br><br><br>
-		<b>--push( ) :</b> Agrega uno mas elementos al final del array y devuelve la cantidad de elementos, o la posicion del ultimo elemento que es lo mismo. <b>let resultado = nombres.pop("Elemento n");</b> <br><br><br><br>
-		<b>--unshift( ) :</b> Agrega uno o mas elementos al inicio del array y devuelve la cantidad de elementos.<br><br><br><br>
-		<b>--reverse( ) :</b> Invierte el orden de los elementos del array. <br><br><br><br>
-		<b>--sort( ) :</b> Ordena los elementos de un array localmente y lo devuelve ordenado (si hay numeros los ordena de menor a mayor o si son palabras, alfabeticamente)<br><br><br><br>
-		<b>--splice( ) :</b> Cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos. <b>numeros.splice(2, 1, "Juan")</b> con esto, decimos desde que posicion vamos a empezar a trabajar, desde que elementos vamos a eliminar, y si vamos a agregar elementos los especificamos ahi.<br><br><br><br>
-		----Transformadores----<br><br>
-		<b>--join( ) :</b> Une todos los elementos de un array en una cadena y lo devuelve, es como el toString( ), pero mejor, por que deja poner como lo vamos a separar al integrarlo a la cadena<br>
-		Ejemplo:<br>
-		<b>
-			&nbsp; &nbsp; &nbsp; let nombres = ["pedro", "maria", "jorge"];<br>
-			&nbsp; &nbsp; &nbsp; let resultado = nombres.join(" - ");<br><br>
-			&nbsp; &nbsp; &nbsp; document.write(resultado);<br><br>
-		</b>
-		Esto muestra: <b>pedro - maria - jorge</b> como una cadena de texto<br><br><br><br>
-		<b>--slice( ) :</b> devuelve una parte de nuestro array, desde donde y hasta donde nosotros le indicamos, <br> <b>let resultado = numeros.slice(1, 5)</b> el ultimo numero no está incluido<br><br><br><br>
-		--Los metodos de cadena que ya vimos como: <b>toString( ), indexOf( ) que devuelve en que posicion del array está el elemento que le indicamos, includes( ) que nos dice true o false si lo incluye</b><br><br><br><br>
-		----De repetición----<br><br>
-		<b>--filter( ) :</b> crea un nuevo array con todos los elementos que cumplan la condicion<br>
-		filter( ) trabaja con una funcion y en cada vuelta, el parametro va a ser igual a cada elemento del array y podemos ponerle una condicion
-		Ejemplo:<br>
-		<b>
-			&nbsp; &nbsp; &nbsp; let nombres = ["abecedario", "manzana", "pedro", "dedo", "bob", "pedro"];<br>
-			&nbsp; &nbsp; &nbsp; let resultado = nombres.filter(let numero => numero.length > 4);<br><br>
-			&nbsp; &nbsp; &nbsp; document.write(resultado);<br><br>
-		</b>
-		Esto muestra en pantalla <b>abecedario, manzana, pedro, pedro</b> por que los otros dos no cumplen con la condicion de tener mas de cuatro letras<br><br><br><br>
-		--forEach( ): Aqui investigar sobre que es forEach mas a fondo.
-	</p>
-</div><br>
-
-<div class="Blur">
-	<button class="btnMath botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="FuncionesDeMath">14. Funciones de math</h1><br>
-	<p class="Explicacion escondidoMath">
-		<b>-Math.sqrt( )</b> : Devuelve la raiz cuadrada positiva de un numero<br>
-		Ejemplo: numero = Math.sqrt(25);<br><br>
-		<b>-Math.cbrt( )</b> : Devuelve la raiz cubica de un numero<br><br>
-		<b>-Math.max( )</b> : Devuelve el numero mayor<br><br>
-		<b>-Math.min( )</b> : Devuelve el numero menor<br><br>
-		<b>-Math.random( )</b> : Devuelve un numero aleatorio<br><br>
-		<b>-Math.round( )</b> : Redondea al numero mas cercano<br><br>
-		<b>-Math.floor( )</b> : Devuelve el numero redondeado para abajo<br><br>
-		<b>-Math.trunc( )</b> : Devuelve el numero mayor<br><br>
-		<b>-Math.trunc( )</b> : Elimina los decimales<br><br>
-	</p>
-</div><br>
-
-<div class="Blur">
-	<button class="btnConsola botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="Consola">15. Consola</h1><br>
-	<p class="Explicacion escondidoConsola">
-		---Funciones de registro---<br>
-	<b>-console.clear( )</b> : Limpia la consola<br>
-	<b>-console.error( )</b> : Muestra un error<br>
-	<b>-console.table( )</b> : Muestra una tabla en consola si le pasamos un array entre los parentesis<br>
-	<b>-console.clear()</b> : Limpia la consola<br><br>
-	---Funciones de conteo---<br>
-	<b>-console.count( )</b> : Va contando cuantas veces lo ponemos en consola<br>
-	<b>-console.countReset( )</b> : Resetea el conteo anterior<br><br>
-	---Funciones de tiempo---<br>
-	<b>-console.time( )</b> : Comienza un contador de tiempo<br>
-	<b>-console.timeLog( )</b> : Muestra el tiempo del contador mientras está en ejecucion<br>
-	<b>-console.timeEnd( )</b> : Finaliza el contador y nos muestra hasta donde contó<br><br>
-	Por cierto, se puede modificar el estilo de texto en consola con CSS
-</p>
-</div><br>
-
-<div class="Blur">
-	<button class="btnDOM botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="DOM">16. DOM</h1><br>
-	<p class="Explicacion escondidoDOM">
-		Son todos los elementos de una pagina web<br>
-		Nodos: Cualquier etiqueta del HTML<br>
-		Nodo Document: es el nodo raiz apartir del cual derivan el resto de nodos<br>
-		Nodo Element: nodos definidos por etiquedas html<br>
-		Nodo Text: el texto dentro de un nodo Element es considerado un nuevo nodo hijo de tipo text <br>
-		Nodo Attribute: los atributos de las etiquetas, aunque en JavaScript no los veremos como nodos sino como informacion asociada al nodo de tipo element<br>
-		Y los nodos de comentarios y otros elementos<br> <br><br>
-	</p>
-	<br><br>
-		<button class="btnSeleccionElementos botonEsconderMostrar fa-solid fa-angle-down"></button>
-		<h2	class="Tema">16.1 Document - Metodos de seleccion de elementos</h1><br>
-		<p class="Explicacion escondidoSeleccionElementos">
-			<b>--Document.getElementByID( )</b> : Selecciona un elemento por ID que coloquemos dentro de los parentesis<br>
-			<b>--Document.getElementsByTagName( )</b> : Selecciona todos los elementos que coincidad con la etiqueta que coloquemos dentro de los parentesis<br>
-			<b>--Document.querySelector( )</b> : Nos devuelve el primer elemento que coincida con el grupo especificado de selectores<br>Ejemplo: Document.querySelector(".parrafo");<br>
-			<b>--Document.querySelectorAll( )</b> : Selecciona todos los elementos que coincidadn con el grupo especificado de selectores<br><br><br>
+		<button class="btnConcatenar botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema">1.2 Para concatenar</h1>
+		<p class="Explicacion escondidoConcatenar">Se puede hacer con el simbolo <b>+</b>
+			<br>
+			Pero tambien se puede haciendo esto:
+			<br>
+			<b>`Este es un texto ${variable} concatenado`</b>
 		</p>
-		<br><br>
-		<button class="btnMetAtributos botonEsconderMostrar fa-solid fa-angle-down"></button>
-		<h2	class="Tema">16.2 Element - Metodos para Definir, Obtener y Eliminar valores de atributos</h2><br>
-		<p class="Explicacion escondidoMetAtributos">
-			<b>--Element.setAttribute( )</b> : Modifica el valor de un atributo, el primer parametro es lo que queremos modificar y el segundo es el valor a modificar. Y ademas, si no tiene el atributo y se lo ponemos al inicio, lo crea<br><br> &nbsp; &nbsp; &nbsp; <b> Ejemplo: </b><br> &nbsp; &nbsp; &nbsp; const randoEtario = document.querySelector(".rangoEtario");<br>
-			&nbsp; &nbsp; &nbsp; rangoEtario.setAttribute("type", "text"); <br><br><br>
-			<b>--Element.getAttribute( )</b> : obtiene el valor de un atributo<br><br>
-			&nbsp; &nbsp; &nbsp; <b>Ejemplo:</b> <br>
-			&nbsp; &nbsp; &nbsp; 	const rangoEtario = document.querySelector(".rangoEtario");<br>
-			&nbsp; &nbsp; &nbsp; valor = rangoEtario.getAttribute("type");<br>
-			&nbsp; &nbsp; &nbsp; document.write(valor);<br><br>
-			Lo cual imprime <b>Text</b> por ejemplo, por que es el valor del atributo Type<br><br><br>
-			<b>--Element.removeAttribute( )</b> : Elimina el valor de un atributo<br><br><br><br>
-		</p>
-		<br><br>
-		<button class="btnAtributosGlob botonEsconderMostrar fa-solid fa-angle-down"></button>
-		<h2	class="Tema">16.3 Atributos globales</h1><br>
-		<p class="Explicacion escondidoAtributosGlob">
-			Son los atributos que contienen todos los elementos HTML<br>
-			<b>--contentEditable</b> : Hace que el contenido del parrafo o Titulo se pueda modificar<br>
-			&nbsp; &nbsp; &nbsp; <b>Ejemplo:</b><br>
-			&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
-			&nbsp; &nbsp; &nbsp; titulo.setAttribute("contentEditable", "true");<br><br>
-			Esto hace que en la pagina web se pueda editar el elemento con la clase ".titulo"<br><br>
-			<b>--tabIndex</b> : Indica si el elemento puede tener un focus, PD: el segundo parametro del parentesis en lugar de ser true o false, es un numero<br><br>
-			<b>--title</b> :  contiene un texto con informacion relacionada al elemento que pertenece<br><br>
-			Hay un monton de atributos globales, como el dir para la direccion del texto, el hidden etc etc etc<br><br><br> 
-		</p>
+	</div><br>
+<!-- Fin Tema 1 -->
 
-			<br><br>
-		<button class="btnAtributosInputs botonEsconderMostrar fa-solid fa-angle-down"></button>
-		<h2	class="Tema">16.4 Atributos de inputs</h1><br>
-		<p class="Explicacion escondidoAtributosInputs">
-			Atributos para los Inputs de un formulario<br>
-			<b>--className</b> : Se usa para capturar el nombre la clase del input<br>
-			&nbsp; &nbsp; &nbsp; <b>Ejemplo:</b><br>
-			&nbsp; &nbsp; &nbsp; const input = document.querySelector(".input-normal");<br>
-			&nbsp; &nbsp; &nbsp; document.write(input.className);<br><br>
-			Esto muestra en pantalla la clase del input<br><br>
-			<b>--value</b> : Nos dice que es lo que esta adentro del input<br><br>
-			<b>--type</b> :  Para modificar el tipo del input<br><br>
-			<b>--accept</b> : Es lo que va a aceptar el input, se usa mucho para los tipo File para decirle que acepte imagen .png o cual sea que queramos<br><br>
-			<b>--form</b> : Nos permite ejecutar un input dentro de un for previamente declarado, aunque este input no este dentro de ese formulario, btw se usa el id<br><br>
-			<b>--minLength</b> : Para los inputs de tipo texto se pone cuandos caracteres minimos tiene que tener para poder enviarse, funciona con clase btw<br><br>
-			<b>--placeholder</b> : Es el texto que aparece en gris antes de escribir en el input<br>
-			&nbsp; &nbsp; &nbsp; <b>Ejemplo:</b><br>
-			&nbsp; &nbsp; &nbsp; input.placeholder = "Primer nombre";<br><br>
-			<b>--require</b> : Nos permite decir si es requerido o no<br><br><br>
-		</p>
-		<br><br>
-		<button class="btnAtributosStyle botonEsconderMostrar fa-solid fa-angle-down"></button>
-		<h2	class="Tema">16.5 Atributos Style</h1><br>
-		<p class="Explicacion escondidoAtributosStyle">
-			Nos permite modificar algo del css<br><br>
-			Por ejemplo:<br>
-			&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
-			&nbsp; &nbsp; &nbsp; titulo.style.color = "red";<br><br>
-			Lo que nos muestra el elemento con la clase titulo de color rojo<br><br>
-			En ocasiones donde el atributo lleve guion, se reemplaza con camelCase, como por ejemplo Background-color se reemplaza con BackgroundColor<br><br><br>
-		</p>
-		<br><br>
-		<button class="btnClassList botonEsconderMostrar fa-solid fa-angle-down"></button>
-			<h2	class="Tema">16.6 Clases, classList y Metodos de classList</h1><br>
-		<p class="Explicacion escondidoClassList">
-			Con classList podemos modificar todo lo relacionado con las clases de un elemento<br><br>
-			Por ejemplo:<br>
-			<b>--Elemento.classList.add()</b><br>
-			&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
-			&nbsp; &nbsp; &nbsp; titulo.classList.add("grande");<br><br>
-			que agrega una nueva clase llamada grande al elemento;<br><br><br>
-			<b>--Elemento.classList.remove()</b><br>
-			Remueve una clase del elemento<br><br><br>
-			<b>--Elemento.classList.item()</b><br>
-			Almacena la clase que se encuentra en la posicion que le indicamos<br>
+
+<!-- Tema 2 -->
+	<div class="Blur">	
+		<button class="btnArrays botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="Arrays">2. Arrays</h1>
+		<p class="Explicacion escondidoArrays">Es como una variable pero podemos guardar muchas cosas en el<br>
 			Por ejemplo: <br>
-			&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
-			&nbsp; &nbsp; &nbsp; let valor = titulo.classList.item(1);<br>
-			&nbsp; &nbsp; &nbsp; document.write(valor);<br>
-			Lo que nos imprime la clase en la posicion 1<br><br><br>
-			<b>--Elemento.classList.contain()</b><br>
-			Nos devuelve si la clase que especificamos dentro del parentesis y en comillas existe en el elemento, si existe devuelve true, sino devuelve false, se implementa como el anterior para devolver el resultado en pantalla<br><br><br>
-			<b>--Elemento.classList.toggle()</b><br>
-			Nosotros ponemos una clase dentro del parentesis con comillas, si la clase existe en el elemento la quita y nos devuelve false, si no existe la agrega y nos devuelve true, tambien podemos agregar un parametro mas de true o false para forzar si la va a sacar o no<br><br><br>
-			<b>--Elemento.classList.replace()</b><br>
-			Ponemos dentro del parentesis, se paradas por comas, primero la clase a reemplazar, y segundo la clase con la que la vamos a reemplazar, si todo esta bien y reemplaza nos devuelve true, si la primer clase no existiera o no se reemplazara nos diera error<br><br><br>
+			<b> &nbsp; &nbsp; &nbsp; let frutas = ["pera", "manzana", "fresa"];</b><br><br>
+			Podemos mostrar todos los elementos, o individuales asi:<br>
+			<b>document.write(frutas[1]);<br></b>
+			Que imprime: <b>manzana</b> por que empieza desde el cero<br><br><br>
+			Tambien existen Arrays Asociativos con los que identificamos los nombres de los elementos<br>
+			Ejemplo:<br>
+			<b>let Computadora = {<br>
+				&nbsp; &nbsp; &nbsp; nombre: "TiBOPC",<br>
+				&nbsp; &nbsp; &nbsp; procesador: "intel Core i7",<br>
+				&nbsp; &nbsp; &nbsp; RAM: "16 GB",<br>
+				&nbsp; &nbsp; &nbsp; Espacio: "1TB",<br>
+				&nbsp; &nbsp; &nbsp; Lectora: "DVD"<br>
+				};<br><br>
+				document.write(Computadora["nombre"])<br>
+			</b>
+			Que imprime: <b>TiBOPC</b> por que identificamos que "nombre" tenia ese valor
 		</p>
-		<br><br>
-		<button class="btnObModElementos botonEsconderMostrar fa-solid fa-angle-down"></button>
-		<h2	class="Tema">16.7 Obtencion y modificacion de elementos</h1><br>
-		<p class="Explicacion escondidoObModElementos">
-			Para devolver y modificar el texto de un elemento<br><br>
-			<b>--textContent</b>: Devuelve el texto de cualquier nodo<br>
-			Por ejemplo:<br>
-			&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
-			&nbsp; &nbsp; &nbsp; let resultado = titulo.textContent;<br>
-			&nbsp; &nbsp; &nbsp; document.write(resultado);<br><br>
-			Lo que nos devuelve el texto que tiene el elemento con la clase "titulo"<br>
-			Nos devuelve el texto sin el estilo<br><br>
-			<b>--innerHTML</b>: Nos devuelve el texto junto con el estilo (Si lo mostramos en un alert se aprecia mejor por que si lo imprimos en pantalla se interpreta el codigo)<br>
-			Tambien se puede utilizar para cambiar el texto de un elemento<br>Por ejemplo:<br>
-			&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
-			&nbsp; &nbsp; &nbsp; titulo.innerText = ("Nuevo texto");<br><br>
-			Lo que cambia el texto del elemento<br><br>
-			<b>--outerHTML</b>: Nos devuelve el texto junto con el estilo y la etiqueta
-			<br><br><br>
-		</p>
-		<br><br>
-		<button class="btnCreaElementos botonEsconderMostrar fa-solid fa-angle-down"></button>
-		<h2	class="Tema">16.8 Creación de elementos</h1><br>
-		<p class="Explicacion escondidoCreaElementos">
-			Por ejemplo si tenemos un div con clase y queremos agregar una lista, podemos crear ese elemento de lista<br><br>
-			<b>Ejemplo</b>: usando createElement():<br>
-			&nbsp; &nbsp; &nbsp; //Llamamos al div con la clase<br>
-			&nbsp; &nbsp; &nbsp; <b>const contenedor = document.querySelector(".contenedor");</b><br><br>
-			&nbsp; &nbsp; &nbsp; //Creamos un elemento, el elemento se tiene que poner en mayuscula<br>
-			&nbsp; &nbsp; &nbsp; <b>const item = document.createElement("LI");</b><br><br>
-			&nbsp; &nbsp; &nbsp; //Le asignamos un texto al elemento LI que acabamos de crear<br>
-			&nbsp; &nbsp; &nbsp; <b>item.textContent = "Este es una linea de texto de la lista";</b><br><br>
-			&nbsp; &nbsp; &nbsp; //Asignamos el LI al contenedor <br>
-			&nbsp; &nbsp; &nbsp; <b>contenedor.appendChild(item);</b><br><br>
-			Lo que nos coloca el LI con el texto dentro del div <br><br>
-			<b>Ejemplo 2:</b> Usando createDocumentFragment():<br>
-			Tambien se puede usar el createDocumentFragment, pero en el video no me queda claro, ver otro tutorial para entender y agregarlo aqui
-			<br><br><br>
-		</p>
+	</div><br>
+<!-- Fin Tema 2 -->
 
-		<br><br>
-		<button class="btnObModChilds botonEsconderMostrar fa-solid fa-angle-down"></button>
-		<h2	class="Tema">16.9 Obtención y modificación de Childs</h1><br>
-		<p class="Explicacion escondidoObModChilds">
-			Sirve para devolvernos el primer o ultimo child de un elemento<br><br>
-			<b>Ejemplo</b>: usando 	firstElementChild:<br>
-			&nbsp; &nbsp; &nbsp; <b>const contenedor = document.querySelector(".contenedor");</b><br>
-			&nbsp; &nbsp; &nbsp; <b>const Hijo = document.firstElementChild;</b><br>
-			&nbsp; &nbsp; &nbsp; <b>console.log(Hijo);</b><br><br>
-			Lo que nos muestra el primer hijo, por ejemplo, si tiene un p con el texto parrafo, lo muestra tal cual <b>< p> Texto < /p></b> y tambien sirve con lastElementChild<br><br><br>
-			<b>Ejemplo 2</b>: usando children:<br>
-			&nbsp; &nbsp; &nbsp; <b>const contenedor = document.querySelector(".contenedor");</b><br><br>
-			&nbsp; &nbsp; &nbsp; <b>const Hijos = document.Children;</b><br><br>
-			&nbsp; &nbsp; &nbsp; <b>for(hijo of Hijos){</b><br><br>
-			&nbsp; &nbsp; &nbsp; &nbsp; <b>console.log(hijo)</b><br><br>
-			Lo que nos devuelve todos los hijos en consola por que lo recorrimos con un for in, casi como un array pero sin ser un arrays
+
+<!-- Tema 3 -->
+	<div class="Blur">
+		<button class="btnIF botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="EstructuraIf">3. Estructura IF</h1>
+		<p class="Explicacion escondidoIF"> 
+		Si se cumple la condición se ejecutará lo que haya adentro<br><br>
+		Ejemplo 1: <br>
+									<b>if(variable == valor){<br>
+									&nbsp; &nbsp; &nbsp; Se ejecuta codigo<br>
+									}<br></b>
+									<br><br>
+		Ejemplo 2 con else: <br>
+									<b>if(variable > valor){<br>
+									&nbsp; &nbsp; &nbsp; Se ejecuta codigo<br>
+									}<br>
+									else{<br>
+									&nbsp; &nbsp; &nbsp; Se ejecuta otro codigo<br>
+									}</b>
+		</p>
+	</div><br>
+<!-- Fin Tema 3 -->
+
+
+<!-- Tema 4 -->
+	<div class="Blur">
+		<button class="btnWhile botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="EstructuraWhile">4. Estructura While</h1>
+		<p class="Explicacion escondidoWhile">Mientras se cumpla la condición se ejecutará el codigo que haya adentro<br>
+			Ejemplo:<br><br>
+			<b>
+				let numero = 1;<br><br>
+				while (numero < 6){<br>
+				&nbsp; &nbsp; &nbsp; numero++;<br>
+				&nbsp; &nbsp; &nbsp; document.write(numero);<br>
+				}
+			</b>
+		</p><br><br><br>
+
+		<button class="btnBreak botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="EstructuraBreak">4.1 Break para el While</h1>
+		<p class="Explicacion escondidoBreak">Sirve para parar el bucle<br>
+			Sirve para todas las estructuras<br>
+			Ejemplo:<br><br>
+			<b>
+				let numero = 1;<br><br>
+				while (numero < 1000){<br>
+				&nbsp; &nbsp; &nbsp; numero++;<br>
+				&nbsp; &nbsp; &nbsp; document.write(numero);<br>
+				&nbsp; &nbsp; &nbsp; if (numero == 10){<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break <br>
+				&nbsp; &nbsp; &nbsp;}<br>
+				}
+			</b>
+		</p>
+	</div><br>
+<!-- Fin Tema 4 -->	
+
+
+<!-- Tema 5 -->
+	<div class="Blur">
+		<button class="btnDoWhile botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="EstructuraDoWhile">5. Estructura Do While</h1>
+		<p class="Explicacion escondidoDoWhile">Se ejecuta el código primero, luego pregunta una condición, y, si se cumple<br>
+			se vuelve a ejecutar, y así hasta que la condición ya no se cumpla<br><br>
+			Ejemplo: <br><br>
+			<b>
+				let numero = 1;<br><br>
+				do{<br>
+				&nbsp; &nbsp; &nbsp; numero++;<br>
+				&nbsp; &nbsp; &nbsp; document.write(numero);<br>
+				} while (numero < 6){<br>
+			</b>
+		</p>
+	</div><br>
+<!-- Fin Tema 5 -->
+
+
+<!-- Tema 6 -->
+	<div class="Blur">
+		<button class="btnFor botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="EstructuraFor">6. Estructura For</h1>
+		<p class="Explicacion escondidoFor">
+			Nosotros le decimos cuantas veces se va a repetir el codigo<br>
+			Ejemplo:<br><br>
+			<b>
+				for(let i = 0; i < 20; i++){<br>
+				&nbsp; &nbsp; &nbsp; document.write(i);<br>
+				}
+			</b>
+		</p>
+	</div><br>
+<!-- Fin Tema 6 -->
+
+
+<!-- Tema 7 -->
+	<div class="Blur">
+		<button class="btnForIn botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="ForIn">7. For in</h1>
+		<p class="Explicacion escondidoForIn">
+			Nos devuelve la posición de los elementos del Array<br>
+			Ejemplo: <br><br>
+			<b>
+			let frutas = ["pera", "manzana", "fresa"];<br>
+			for (fruta in frutas){<br>
+				&nbsp; &nbsp; &nbsp; document.write(fruta);<br>
+			} </b><br><br>
+			Que imprime: <b>0, 1, 2</b>
+		</p>
+	</div><br>
+<!-- Fin Tema 7 -->
+
+
+<!-- Tema 8 -->
+	<div class="Blur">
+		<button class="btnForOf botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="ForOf">8. For of</h1>
+		<p class="Explicacion escondidoForOf">
+			Nos devuelve los elementos del Array<br>
+			Ejemplo: <br><br>
+			<b>
+			let frutas = ["pera", "manzana", "fresa"];<br>
+			for (fruta of frutas){<br>
+				&nbsp; &nbsp; &nbsp; document.write(fruta);<br>
+			} </b><br><br>
+			Que imprime: <b>pera, manzana, fresa</b>
+		</p>
+	</div><br>
+<!-- Fin Tema 8 -->
+
+
+<!-- Tema 9 -->
+	<div class="Blur">
+		<button class="btnFunciones botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="Funciones">9. Funciones</h1>
+		<p class="Explicacion escondidoFunciones">Son porciones de codigo que se utilizan para realizar una accion con la posibilidad de ejecutarlo despues<br><br>
+			Ejemplo 1: con la palabra function<br>
+			<b>
+				&nbsp; &nbsp; function saludar(){<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.write("Hola!");<br>
+				&nbsp; &nbsp; }<br><br>
+				saludar();<br><br><br>
+			</b>
+
+			Ejemplo 2: con la palabra function devolviendo un resultado<br>
+			<b>
+				&nbsp; &nbsp; function suma(num1, num2){<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let res = num1 + num2;<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return res;<br>
+				&nbsp; &nbsp; }<br><br>
+				let resultado = suma(20, 25);<br>
+				document.write(resultado)
+			</b>
 			<br><br><br>
+			Ejemplo 2: como flecha<br>
+			<b>
+				&nbsp; &nbsp;const saludar(nombre)=>{<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let frase = `Hola ${nombre} como estas`;<br>
+				&nbsp; &nbsp; }<br>
+				<br>
+				saludar("Pedro");<br>
+			</b>
 		</p>
-		
-		
-		<br><br>
-		<button class="btnMetChild botonEsconderMostrar fa-solid fa-angle-down"></button>
-		<h2	class="Tema">16.10 Metodos de Chilld</h1><br>
-		<p class="Explicacion escondidoMetChild">
-			Con estos metodos podemos reemplazar o remover cualquier elemento child<br><br>
-			<b>Ejemplo</b>: usando 	replaceChild(nuevo, antiguo):<br>
-			&nbsp; &nbsp; &nbsp; <b>const contenedor = document.querySelector(".contenedor");</b><br>
-			&nbsp; &nbsp; &nbsp; <b>const h2Nuevo = document.createElement("H2");</b><br>
-			&nbsp; &nbsp; &nbsp; <b>h2Nuevo.TextContent = "Titulo";</b><br>
-			&nbsp; &nbsp; &nbsp; <b>const h2Antiguo = document.querySelector(".h2aMod");</b><br>
-			&nbsp; &nbsp; &nbsp; <b>contenedor.replaceChild(h2Nuevo, h2Antiguo);</b><br>
-			Lo que nos cambia el h2 antiguo que teniamos en el contenedor a el h2 nuevo que creamos y le asigmanos un texto<br><br><br>
+	</div>	<br>
+<!-- Fin Tema 9 -->
 
-			<b>Ejemplo 2</b>: usando removeChild():<br>
-			&nbsp; &nbsp; &nbsp; <b>const contenedor = document.querySelector(".contenedor");</b><br>
-			&nbsp; &nbsp; &nbsp; <b>const h2 = document.querySelector(".h2");</b><br>
-			&nbsp; &nbsp; &nbsp; <b>contenedor.removeChild(".h2")</b><br><br>
-			Lo que elimina el h2 que está dentro del contendor<br><br><br>
-		
-			<b>Ejemplo 3</b>: usando hasChildNodes():<br>
-			&nbsp; &nbsp; &nbsp; <b>const contenedor = document.querySelector(".contenedor");</b><br>
-			&nbsp; &nbsp; &nbsp; <b>let respuesta = contedor.hasChildNodes();</b><br>
-			Nos devuelve true si tiene hijos o false si no tiene, es util por que como hijos tambien detecta el texto, si el elemento tiene texto entonces la respuesta es verdadera porque si tiene hijos<br><br><br>
-			<br><br>
-			Luego tambien esta para los padres que es <b>contenedor.parentElement;</b> que nos devuelve el padre de los childs
+
+<!-- Tema 10 -->
+	<div class="Blur">
+		<button class="btnClases botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="DefinicionDeClases">10. Definición de Clases</h1>
+		<p class="Explicacion escondidoClases">De programación orientada a objetos, sirve para crear objetos definiendo los parametros, metodos y propiedades de estos objetos<br><br>
+			Ejemplo 1: Definimos la clase, creamos el objeto y mostramos una propiedad<br>
+			<b>
+				&nbsp; &nbsp;class Animal {<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; constructor(especie, edad, color){<br>
+				&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.especie = especie;<br>
+				&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.edad = edad;<br>
+				&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.color = color;<br>
+				&nbsp; &nbsp; &nbsp; &nbsp;}<br>
+				&nbsp; &nbsp;}<br><br>
+				const perro = new Animal("perro", 5, "café");<br>
+				document.write("perro.color")
+			</b>
+			<br><br><br>
+			Ejemplo 2: Creamos la clase, creamos tres objetos, creamos un metodo y mostramos el metodo por cada objeto con sus propiedades<br>
+			OJO: <b>LAS FUNCIONES FLECHA NO PUEDEN SER USADAS PARA DEFINIR UN METODO</b><br><br>
+			<b>
+				&nbsp; &nbsp;class Animal {<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; constructor(especie, edad, color){<br>
+				&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.especie = especie;<br>
+				&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.edad = edad;<br>
+				&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.color = color;<br>
+				&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; this.info = `Soy ${this.especie}, tengo ${this.edad} años y soy de color ${this.color}`;<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; }<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; verInfo(){<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.write(this.info);<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; }<br>
+				&nbsp; &nbsp;}<br><br>
+				const perro = new Animal("perro", 5, "café");<br>
+				const gato = new Animal("gato", 3, "blanco");<br>
+				const pajaro = new Animal("pajaro", 4, "verde");<br><br>
+				perro.verInfo( );<br>
+				gato.verInfo( );<br>
+				pajaro.verInfo( );<br>
+			</b>
 		</p>
+	</div><br>
+<!-- Fin Tema 10 -->
 
+
+<!-- Tema 11 -->
+	<div class="Blur">
+		<button class="btnPoo botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="ConceptosDePOO">11. Conceptos de POO</h1>
+		<p class="Explicacion escondidoPoo">Es un paradigma de programación asi como otros, que se basa en, como su nombre lo indica, crear objetos<br>
+			Tiene algunas caracteristicas como:<br>
+			<b>--Abstracción:</b> Intentar reducir el objeto a sus componentes basicos, por ejemplo, si tenemos un perro, no decimos tamaño de la cabeza, color de la cola, etc<br>
+			<b>--Modularidad:</b> Resolver un problema grande diviviendolo por partes<br>
+			<b>--Encapsulamiento:</b> Hacer que todos los datos sean privados, encapsular los datos<br>
+			<b>--Polimorfismo:</b> Ver como un objeto se comporta diferente ante un metodo, por ejemplo, si tengo el metodo caminar, un perro va a caminar diferente que un pajaro por las propiedades que tiene<br>
+			<b>--Herencia:</b> Sirve para agregarle mas propiedades o metodos a una clase, heredando cosas de la clase principal<br>
+			Ejemplo de Herencia:<br><br>
+			<b>
+				&nbsp; &nbsp; class Perro <i>extends</i> Animal{<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; constructor(especie, edad, color, raza){<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; super(especie, edad, color);<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.raza = raza;<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; } <br>
+				&nbsp; &nbsp; }<br><br>
+				const perro = new Perro("perro", 7, "negro", "Pastor aleman");<br><br>
+			</b>
+			Y ahora puede tener los metodos de la clase Animal, y los parametros que puso en super<br><br>
+			<b>--Metodos estaticos:</b> Son los metodos de una clase que se pueden utilizar antes de crear un objeto o que no necesitan que el objeto se haya creado para poder usarse<br>
+			Ejemplo:<br>
+			<b>
+				&nbsp; &nbsp; class Perro <i>extends</i> Animal{<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; constructor(especie, edad, color, raza){<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; super(especie, edad, color);<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.raza = raza;<br>
+				&nbsp; &nbsp; &nbsp; &nbsp;}<br>
+				&nbsp; &nbsp; &nbsp; static ladrar( ){<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert("Wof"); <br>
+				&nbsp; &nbsp; &nbsp; }<br>
+				&nbsp; &nbsp; }<br><br>
+				&nbsp; &nbsp; Perro.ladrar( );<br>
+			</b>
+			Como podemos ver, la clase Perro, puede usar el metodo static sin haber creado el objeto por que no utiliza ningun parametro
+			<br><br><br>
+			<b>--Metodo Get y Set:</b> <br>
+			Get se utiliza para traer el valor de un parametro y set para asignarlo<br>
+			Ejemplo:<br><br>
+			<b>
+				&nbsp; &nbsp; class Perro <i>extends</i> Animal{<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; constructor(especie, edad, color, raza){<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; super(especie, edad, color);<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.raza = raza;<br>
+				&nbsp; &nbsp; &nbsp; &nbsp;}<br><br>
+
+				&nbsp; &nbsp; &nbsp; set setRaza(newRaza){<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.raza = newRaza; <br>
+				&nbsp; &nbsp; &nbsp; }<br><br>
+				&nbsp; &nbsp; &nbsp; get getRaza( ){<br>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return this.raza; <br>
+				&nbsp; &nbsp; &nbsp; }<br>
+				&nbsp; &nbsp; }<br><br>
+				&nbsp; &nbsp; perro.setRaza = "Pedro"; <br>
+				&nbsp; &nbsp; document.write(perro.getRaza);
+				</b><br><br>
+			Esto imprime la raza pedro por que la modificamos con set y trajimos el valor con Get
+
+		</p>
+	</div><br>
+<!-- Fin Tema 11 -->
+
+
+<!-- Tema 12 -->
+	<div class="Blur">
+		<button class="btnCadena botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="MetodosDeCadena">12. Metodos de cadena</h1>	
+		<p class="Explicacion escondidoCadena">
+			Son metodos que se pueden utilizar para modificar las cadenas de texto.<br><br>
+			<b>----Concat( )----</b><br>
+			Junta dos o mas cadenas y las retorna.<br>
+			Ejemplo:<br>
+			<b>
+			&nbsp; &nbsp; &nbsp; let cadena = "cadena 1";<br>
+			&nbsp; &nbsp; &nbsp; let cadena2 = "cadena 2";<br><br>
+			&nbsp; &nbsp; &nbsp; resultado = cadena.concat(cadena2);<br><br>
+			&nbsp; &nbsp; &nbsp; document.write(resultado);
+			</b><br><br><br><br>
+			<b>----startsWith( ) y endsWith( )----</b><br>
+			Si una cadena empieza o termina con los caracteres de otra cadena devuelve true, sino false<br>
+			Ejemplo:<br>
+			<b>
+			&nbsp; &nbsp; &nbsp; let cadena = "cadena de prueba";<br>
+			&nbsp; &nbsp; &nbsp; let cadena2 = "cadena";<br><br>
+			&nbsp; &nbsp; &nbsp; resultado = cadena.startsWith(cadena2);<br><br>
+			&nbsp; &nbsp; &nbsp; document.write(resultado);
+			</b><br>
+			Esto devuelve <b>True</b> en pantalla, por que si empieza con esa cadena, con endsWith devuelve false, por que no temina asi.
+			<br><br><br><br>
+			<b>----includes----</b><br>
+			Si una cadena se encuentra (en cualquier parte) dentro de otra cadena devuelve true, sino false<br><br><br>
+			<b>----indexOf y lastIndexOF----</b>
+			<br>
+			Devuelve el indice del primer o ultimo caracter de la cadena, si no existe, devuelve -1<br>
+			Ejemplo:<br>
+			<b>
+			&nbsp; &nbsp; &nbsp; let cadena = "cadena de prueba si";<br>
+			&nbsp; &nbsp; &nbsp; let cadena2 = "prueba";<br><br>
+			&nbsp; &nbsp; &nbsp; resultado = cadena.indexOf(cadena2);<br><br>
+			&nbsp; &nbsp; &nbsp; document.write(resultado);
+			</b><br>
+			Esto devuelve <b>11</b> en pantalla, por que el primer caracter de la cadena, la "p", está en la posicion 11<br>si fuera lastIndexOf( ) sería <b>16</b> por que es el indice del ultimo caracter de la cadena
+			<br><br><br><br>
+			<b>----padStart( ) y padEnd( )----</b><br>
+			Rellena la cadena al principio o final con los caracteres deseados.<br>
+			Ejemplo:<br>
+			<b>
+			&nbsp; &nbsp; &nbsp; let cadena = "abc";<br>
+			&nbsp; &nbsp; &nbsp; let cadena2 = "";<br><br>
+			&nbsp; &nbsp; &nbsp; resultado = cadena.padStart(10, "12");<br><br>
+			&nbsp; &nbsp; &nbsp; document.write(resultado);
+			</b><br><br>
+			Esto devuelve <b>1212121abc</b> en pantalla, se agregan los necesesarios "12" para completar los 10 caracteres que se definieron, aunque falte uno se pone para llegar a 10, si fuera el padEnd: <b>abc1212121</b><br><br><br><br>
+			<b>----repeat( )----</b><br>
+			Devuelve la misma cadena pero repetida la cantidad de veces que deseamos<br>
+			Ejemplo: <b>abcabcabc</b> si escribimos al ejemplo de arriba <b>resultado = cadena.repeat(3);</b><br><br><br><br>
+			<b>----split( )----</b><br> Divide la cadena en un array, desde donde nosotros le indicamos<br>
+			Ejemplo: <br>
+			<b>
+			&nbsp; &nbsp; &nbsp; let cadena = "Hola como estas";<br>
+			&nbsp; &nbsp; &nbsp; resultado = cadena.split("como");<br><br>
+			&nbsp; &nbsp; &nbsp; document.write(resultado[0]);
+			</b><br><br>	
+			Esto devuelve <b>Hola</b> en pantalla, por que separamos desde donde nosotros le indicamos <br>
+			el <b>como</b> se elimina<br>
+			en <b>resultado[1]</b> está el <b>estas</b><br> y si pusieramos solo un espacio, separa esa cadena en tres partes por los tres espacios: [Hola,como,estas]<br><br><br><br>
+			<b>----substring( )-----</b><br> Nos retorna un pedazo de la cadena empezando y terminando desde donde nosotros deseamos<br>	Ejemplo: <br>
+			<b>
+			&nbsp; &nbsp; &nbsp; let cadena = "ABCDEFG";<br>
+			&nbsp; &nbsp; &nbsp; resultado = cadena.substring(2,4);<br><br>
+			&nbsp; &nbsp; &nbsp; document.write(resultado);
+			</b><br><br>
+			Esto devuelve <b>CD</b> en pantalla, ya que toma la posicion 2 y 3 porque OJO toma el indice del inicio pero no el del final<br><br><br><br>
+			<b>----toUpperCase( )</b> y  <b>toLowerCase( )----<br></b> Pasa la cadena de minuscula a mayuscula y viceversa<br><br><br><br>
+			<b>----toString( )----</b><br> Pasa a String<br><br><br><br>
+			<b>----trim( ), trimStart( ) y trimEnd( )----</b><br> Quita los espacios al inicio y al final de una cadena, solo los espacios del inicio o solo los del final respectivamente.<br>
+		</p>
+	</div><br>
+<!-- Fin Tema 12 -->
+
+
+<!-- Tema 3 -->
+	<div class="Blur">
+		<button class="btnMetodoArray botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="MetodosDeArrays">13. Metodos de Arrays</h1> <br>
+		<p class="Explicacion escondidoMetodoArray">
+			----Transformadores----<br><br>
+			<b>--Pop( ) :</b> Elimina el ultimo elemento de un array y lo devuelve<br>
+			Ejemplo:<br>
+			<b>
+				&nbsp; &nbsp; &nbsp; let nombres = ["pedro", "maria", "jorge"];<br>
+				&nbsp; &nbsp; &nbsp; let resultado = nombres.pop();<br><br>
+				&nbsp; &nbsp; &nbsp; document.write(nombres);<br><br>
+			</b>
+			Aqui muestra <b>jorge</b> por que fue el que eliminó por ser el ultimo elemento del array<br><br><br><br>
+			<b>--shift( ) :</b> Elimina el primer elemento de un array y lo devuelve, asi como el anterior.<br><br><br><br>
+			<b>--push( ) :</b> Agrega uno mas elementos al final del array y devuelve la cantidad de elementos, o la posicion del ultimo elemento que es lo mismo. <b>let resultado = nombres.pop("Elemento n");</b> <br><br><br><br>
+			<b>--unshift( ) :</b> Agrega uno o mas elementos al inicio del array y devuelve la cantidad de elementos.<br><br><br><br>
+			<b>--reverse( ) :</b> Invierte el orden de los elementos del array. <br><br><br><br>
+			<b>--sort( ) :</b> Ordena los elementos de un array localmente y lo devuelve ordenado (si hay numeros los ordena de menor a mayor o si son palabras, alfabeticamente)<br><br><br><br>
+			<b>--splice( ) :</b> Cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos. <b>numeros.splice(2, 1, "Juan")</b> con esto, decimos desde que posicion vamos a empezar a trabajar, desde que elementos vamos a eliminar, y si vamos a agregar elementos los especificamos ahi.<br><br><br><br>
+			----Transformadores----<br><br>
+			<b>--join( ) :</b> Une todos los elementos de un array en una cadena y lo devuelve, es como el toString( ), pero mejor, por que deja poner como lo vamos a separar al integrarlo a la cadena<br>
+			Ejemplo:<br>
+			<b>
+				&nbsp; &nbsp; &nbsp; let nombres = ["pedro", "maria", "jorge"];<br>
+				&nbsp; &nbsp; &nbsp; let resultado = nombres.join(" - ");<br><br>
+				&nbsp; &nbsp; &nbsp; document.write(resultado);<br><br>
+			</b>
+			Esto muestra: <b>pedro - maria - jorge</b> como una cadena de texto<br><br><br><br>
+			<b>--slice( ) :</b> devuelve una parte de nuestro array, desde donde y hasta donde nosotros le indicamos, <br> <b>let resultado = numeros.slice(1, 5)</b> el ultimo numero no está incluido<br><br><br><br>
+			--Los metodos de cadena que ya vimos como: <b>toString( ), indexOf( ) que devuelve en que posicion del array está el elemento que le indicamos, includes( ) que nos dice true o false si lo incluye</b><br><br><br><br>
+			----De repetición----<br><br>
+			<b>--filter( ) :</b> crea un nuevo array con todos los elementos que cumplan la condicion<br>
+			filter( ) trabaja con una funcion y en cada vuelta, el parametro va a ser igual a cada elemento del array y podemos ponerle una condicion
+			Ejemplo:<br>
+			<b>
+				&nbsp; &nbsp; &nbsp; let nombres = ["abecedario", "manzana", "pedro", "dedo", "bob", "pedro"];<br>
+				&nbsp; &nbsp; &nbsp; let resultado = nombres.filter(let numero => numero.length > 4);<br><br>
+				&nbsp; &nbsp; &nbsp; document.write(resultado);<br><br>
+			</b>
+			Esto muestra en pantalla <b>abecedario, manzana, pedro, pedro</b> por que los otros dos no cumplen con la condicion de tener mas de cuatro letras<br><br><br><br>
+			--forEach( ): Aqui investigar sobre que es forEach mas a fondo.
+		</p>
+	</div><br>
+<!-- Fin Tema 13 -->
+
+
+<!-- Tema 14 -->
+	<div class="Blur">
+		<button class="btnMath botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="FuncionesDeMath">14. Funciones de math</h1><br>
+		<p class="Explicacion escondidoMath">
+			<b>-Math.sqrt( )</b> : Devuelve la raiz cuadrada positiva de un numero<br>
+			Ejemplo: numero = Math.sqrt(25);<br><br>
+			<b>-Math.cbrt( )</b> : Devuelve la raiz cubica de un numero<br><br>
+			<b>-Math.max( )</b> : Devuelve el numero mayor<br><br>
+			<b>-Math.min( )</b> : Devuelve el numero menor<br><br>
+			<b>-Math.random( )</b> : Devuelve un numero aleatorio<br><br>
+			<b>-Math.round( )</b> : Redondea al numero mas cercano<br><br>
+			<b>-Math.floor( )</b> : Devuelve el numero redondeado para abajo<br><br>
+			<b>-Math.trunc( )</b> : Devuelve el numero mayor<br><br>
+			<b>-Math.trunc( )</b> : Elimina los decimales<br><br>
+		</p>
+	</div><br>
+<!-- Fin Tema 14 -->
+
+
+<!-- Tema 15 -->
+	<div class="Blur">
+		<button class="btnConsola botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="Consola">15. Consola</h1><br>
+		<p class="Explicacion escondidoConsola">
+			---Funciones de registro---<br>
+			<b>-console.clear( )</b> : Limpia la consola<br>
+			<b>-console.error( )</b> : Muestra un error<br>
+			<b>-console.table( )</b> : Muestra una tabla en consola si le pasamos un array entre los parentesis<br>
+			<b>-console.clear()</b> : Limpia la consola<br><br>
+			---Funciones de conteo---<br>
+			<b>-console.count( )</b> : Va contando cuantas veces lo ponemos en consola<br>
+			<b>-console.countReset( )</b> : Resetea el conteo anterior<br><br>
+			---Funciones de tiempo---<br>
+			<b>-console.time( )</b> : Comienza un contador de tiempo<br>
+			<b>-console.timeLog( )</b> : Muestra el tiempo del contador mientras está en ejecucion<br>
+			<b>-console.timeEnd( )</b> : Finaliza el contador y nos muestra hasta donde contó<br><br>
+			Por cierto, se puede modificar el estilo de texto en consola con CSS
+		</p>
+	</div><br>
+<!-- Fin Tema 15 -->
+
+
+<!-- Tema 16 -->
+	<div class="Blur">
+		<button class="btnDOM botonEsconderMostrar fa-solid fa-angle-down"></button>
+		<h1 class="Tema" id="DOM">16. DOM</h1><br>
+		<p class="Explicacion escondidoDOM">
+			Son todos los elementos de una pagina web<br>
+			Nodos: Cualquier etiqueta del HTML<br>
+			Nodo Document: es el nodo raiz apartir del cual derivan el resto de nodos<br>
+			Nodo Element: nodos definidos por etiquedas html<br>
+			Nodo Text: el texto dentro de un nodo Element es considerado un nuevo nodo hijo de tipo text <br>
+			Nodo Attribute: los atributos de las etiquetas, aunque en JavaScript no los veremos como nodos sino como informacion asociada al nodo de tipo element<br>
+			Y los nodos de comentarios y otros elementos<br> <br><br>
+		</p><br><br>
+
+			<button class="btnSeleccionElementos botonEsconderMostrar fa-solid fa-angle-down"></button>
+			<h2	class="Tema">16.1 Document - Metodos de seleccion de elementos</h1><br>
+			<p class="Explicacion escondidoSeleccionElementos">
+				<b>--Document.getElementByID( )</b> : Selecciona un elemento por ID que coloquemos dentro de los parentesis<br>
+				<b>--Document.getElementsByTagName( )</b> : Selecciona todos los elementos que coincidad con la etiqueta que coloquemos dentro de los parentesis<br>
+				<b>--Document.querySelector( )</b> : Nos devuelve el primer elemento que coincida con el grupo especificado de selectores<br>Ejemplo: Document.querySelector(".parrafo");<br>
+				<b>--Document.querySelectorAll( )</b> : Selecciona todos los elementos que coincidadn con el grupo especificado de selectores<br><br><br>
+			</p><br><br>
+
+			<button class="btnMetAtributos botonEsconderMostrar fa-solid fa-angle-down"></button>
+			<h2	class="Tema">16.2 Element - Metodos para Definir, Obtener y Eliminar valores de atributos</h2><br>
+			<p class="Explicacion escondidoMetAtributos">
+				<b>--Element.setAttribute( )</b> : Modifica el valor de un atributo, el primer parametro es lo que queremos modificar y el segundo es el valor a modificar. Y ademas, si no tiene el atributo y se lo ponemos al inicio, lo crea<br><br> &nbsp; &nbsp; &nbsp; <b> Ejemplo: </b><br> &nbsp; &nbsp; &nbsp; const randoEtario = document.querySelector(".rangoEtario");<br>
+				&nbsp; &nbsp; &nbsp; rangoEtario.setAttribute("type", "text"); <br><br><br>
+				<b>--Element.getAttribute( )</b> : obtiene el valor de un atributo<br><br>
+				&nbsp; &nbsp; &nbsp; <b>Ejemplo:</b> <br>
+				&nbsp; &nbsp; &nbsp; 	const rangoEtario = document.querySelector(".rangoEtario");<br>
+				&nbsp; &nbsp; &nbsp; valor = rangoEtario.getAttribute("type");<br>
+				&nbsp; &nbsp; &nbsp; document.write(valor);<br><br>
+				Lo cual imprime <b>Text</b> por ejemplo, por que es el valor del atributo Type<br><br><br>
+				<b>--Element.removeAttribute( )</b> : Elimina el valor de un atributo<br><br><br><br>
+			</p><br><br>
+
+			<button class="btnAtributosGlob botonEsconderMostrar fa-solid fa-angle-down"></button>
+			<h2	class="Tema">16.3 Atributos globales</h1><br>
+			<p class="Explicacion escondidoAtributosGlob">
+				Son los atributos que contienen todos los elementos HTML<br>
+				<b>--contentEditable</b> : Hace que el contenido del parrafo o Titulo se pueda modificar<br>
+				&nbsp; &nbsp; &nbsp; <b>Ejemplo:</b><br>
+				&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
+				&nbsp; &nbsp; &nbsp; titulo.setAttribute("contentEditable", "true");<br><br>
+				Esto hace que en la pagina web se pueda editar el elemento con la clase ".titulo"<br><br>
+				<b>--tabIndex</b> : Indica si el elemento puede tener un focus, PD: el segundo parametro del parentesis en lugar de ser true o false, es un numero<br><br>
+				<b>--title</b> :  contiene un texto con informacion relacionada al elemento que pertenece<br><br>
+				Hay un monton de atributos globales, como el dir para la direccion del texto, el hidden etc etc etc<br><br><br> 
+			</p><br><br>
+
+			<button class="btnAtributosInputs botonEsconderMostrar fa-solid fa-angle-down"></button>
+			<h2	class="Tema">16.4 Atributos de inputs</h1><br>
+			<p class="Explicacion escondidoAtributosInputs">
+				Atributos para los Inputs de un formulario<br>
+				<b>--className</b> : Se usa para capturar el nombre la clase del input<br>
+				&nbsp; &nbsp; &nbsp; <b>Ejemplo:</b><br>
+				&nbsp; &nbsp; &nbsp; const input = document.querySelector(".input-normal");<br>
+				&nbsp; &nbsp; &nbsp; document.write(input.className);<br><br>
+				Esto muestra en pantalla la clase del input<br><br>
+				<b>--value</b> : Nos dice que es lo que esta adentro del input<br><br>
+				<b>--type</b> :  Para modificar el tipo del input<br><br>
+				<b>--accept</b> : Es lo que va a aceptar el input, se usa mucho para los tipo File para decirle que acepte imagen .png o cual sea que queramos<br><br>
+				<b>--form</b> : Nos permite ejecutar un input dentro de un for previamente declarado, aunque este input no este dentro de ese formulario, btw se usa el id<br><br>
+				<b>--minLength</b> : Para los inputs de tipo texto se pone cuandos caracteres minimos tiene que tener para poder enviarse, funciona con clase btw<br><br>
+				<b>--placeholder</b> : Es el texto que aparece en gris antes de escribir en el input<br>
+				&nbsp; &nbsp; &nbsp; <b>Ejemplo:</b><br>
+				&nbsp; &nbsp; &nbsp; input.placeholder = "Primer nombre";<br><br>
+				<b>--require</b> : Nos permite decir si es requerido o no<br><br><br>
+			</p><br><br>
+
+			<button class="btnAtributosStyle botonEsconderMostrar fa-solid fa-angle-down"></button>
+			<h2	class="Tema">16.5 Atributos Style</h1><br>
+			<p class="Explicacion escondidoAtributosStyle">
+				Nos permite modificar algo del css<br><br>
+				Por ejemplo:<br>
+				&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
+				&nbsp; &nbsp; &nbsp; titulo.style.color = "red";<br><br>
+				Lo que nos muestra el elemento con la clase titulo de color rojo<br><br>
+				En ocasiones donde el atributo lleve guion, se reemplaza con camelCase, como por ejemplo Background-color se reemplaza con BackgroundColor<br><br><br>
+			</p><br><br>
+
+			<button class="btnClassList botonEsconderMostrar fa-solid fa-angle-down"></button>
+				<h2	class="Tema">16.6 Clases, classList y Metodos de classList</h1><br>
+			<p class="Explicacion escondidoClassList">
+				Con classList podemos modificar todo lo relacionado con las clases de un elemento<br><br>
+				Por ejemplo:<br>
+				<b>--Elemento.classList.add()</b><br>
+				&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
+				&nbsp; &nbsp; &nbsp; titulo.classList.add("grande");<br><br>
+				que agrega una nueva clase llamada grande al elemento;<br><br><br>
+				<b>--Elemento.classList.remove()</b><br>
+				Remueve una clase del elemento<br><br><br>
+				<b>--Elemento.classList.item()</b><br>
+				Almacena la clase que se encuentra en la posicion que le indicamos<br>
+				Por ejemplo: <br>
+				&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
+				&nbsp; &nbsp; &nbsp; let valor = titulo.classList.item(1);<br>
+				&nbsp; &nbsp; &nbsp; document.write(valor);<br>
+				Lo que nos imprime la clase en la posicion 1<br><br><br>
+				<b>--Elemento.classList.contain()</b><br>
+				Nos devuelve si la clase que especificamos dentro del parentesis y en comillas existe en el elemento, si existe devuelve true, sino devuelve false, se implementa como el anterior para devolver el resultado en pantalla<br><br><br>
+				<b>--Elemento.classList.toggle()</b><br>
+				Nosotros ponemos una clase dentro del parentesis con comillas, si la clase existe en el elemento la quita y nos devuelve false, si no existe la agrega y nos devuelve true, tambien podemos agregar un parametro mas de true o false para forzar si la va a sacar o no<br><br><br>
+				<b>--Elemento.classList.replace()</b><br>
+				Ponemos dentro del parentesis, se paradas por comas, primero la clase a reemplazar, y segundo la clase con la que la vamos a reemplazar, si todo esta bien y reemplaza nos devuelve true, si la primer clase no existiera o no se reemplazara nos diera error<br><br><br>
+			</p><br><br>
+
+			<button class="btnObModElementos botonEsconderMostrar fa-solid fa-angle-down"></button>
+			<h2	class="Tema">16.7 Obtencion y modificacion de elementos</h1><br>
+			<p class="Explicacion escondidoObModElementos">
+				Para devolver y modificar el texto de un elemento<br><br>
+				<b>--textContent</b>: Devuelve el texto de cualquier nodo<br>
+				Por ejemplo:<br>
+				&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
+				&nbsp; &nbsp; &nbsp; let resultado = titulo.textContent;<br>
+				&nbsp; &nbsp; &nbsp; document.write(resultado);<br><br>
+				Lo que nos devuelve el texto que tiene el elemento con la clase "titulo"<br>
+				Nos devuelve el texto sin el estilo<br><br>
+				<b>--innerHTML</b>: Nos devuelve el texto junto con el estilo (Si lo mostramos en un alert se aprecia mejor por que si lo imprimos en pantalla se interpreta el codigo)<br>
+				Tambien se puede utilizar para cambiar el texto de un elemento<br>Por ejemplo:<br>
+				&nbsp; &nbsp; &nbsp; const titulo = document.querySelector(".titulo");<br>
+				&nbsp; &nbsp; &nbsp; titulo.innerText = ("Nuevo texto");<br><br>
+				Lo que cambia el texto del elemento<br><br>
+				<b>--outerHTML</b>: Nos devuelve el texto junto con el estilo y la etiqueta
+				<br><br><br>
+			</p><br><br>
+
+			<button class="btnCreaElementos botonEsconderMostrar fa-solid fa-angle-down"></button>
+			<h2	class="Tema">16.8 Creación de elementos</h1><br>
+			<p class="Explicacion escondidoCreaElementos">
+				Por ejemplo si tenemos un div con clase y queremos agregar una lista, podemos crear ese elemento de lista<br><br>
+				<b>Ejemplo</b>: usando createElement():<br>
+				&nbsp; &nbsp; &nbsp; //Llamamos al div con la clase<br>
+				&nbsp; &nbsp; &nbsp; <b>const contenedor = document.querySelector(".contenedor");</b><br><br>
+				&nbsp; &nbsp; &nbsp; //Creamos un elemento, el elemento se tiene que poner en mayuscula<br>
+				&nbsp; &nbsp; &nbsp; <b>const item = document.createElement("LI");</b><br><br>
+				&nbsp; &nbsp; &nbsp; //Le asignamos un texto al elemento LI que acabamos de crear<br>
+				&nbsp; &nbsp; &nbsp; <b>item.textContent = "Este es una linea de texto de la lista";</b><br><br>
+				&nbsp; &nbsp; &nbsp; //Asignamos el LI al contenedor <br>
+				&nbsp; &nbsp; &nbsp; <b>contenedor.appendChild(item);</b><br><br>
+				Lo que nos coloca el LI con el texto dentro del div <br><br>
+				<b>Ejemplo 2:</b> Usando createDocumentFragment():<br>
+				Tambien se puede usar el createDocumentFragment, pero en el video no me queda claro, ver otro tutorial para entender y agregarlo aqui
+				<br><br><br>
+			</p><br><br>
+
+			<button class="btnObModChilds botonEsconderMostrar fa-solid fa-angle-down"></button>
+			<h2	class="Tema">16.9 Obtención y modificación de Childs</h1><br>
+			<p class="Explicacion escondidoObModChilds">
+				Sirve para devolvernos el primer o ultimo child de un elemento<br><br>
+				<b>Ejemplo</b>: usando 	firstElementChild:<br>
+				&nbsp; &nbsp; &nbsp; <b>const contenedor = document.querySelector(".contenedor");</b><br>
+				&nbsp; &nbsp; &nbsp; <b>const Hijo = document.firstElementChild;</b><br>
+				&nbsp; &nbsp; &nbsp; <b>console.log(Hijo);</b><br><br>
+				Lo que nos muestra el primer hijo, por ejemplo, si tiene un p con el texto parrafo, lo muestra tal cual <b>< p> Texto < /p></b> y tambien sirve con lastElementChild<br><br><br>
+				<b>Ejemplo 2</b>: usando children:<br>
+				&nbsp; &nbsp; &nbsp; <b>const contenedor = document.querySelector(".contenedor");</b><br><br>
+				&nbsp; &nbsp; &nbsp; <b>const Hijos = document.Children;</b><br><br>
+				&nbsp; &nbsp; &nbsp; <b>for(hijo of Hijos){</b><br><br>
+				&nbsp; &nbsp; &nbsp; &nbsp; <b>console.log(hijo)</b><br><br>
+				Lo que nos devuelve todos los hijos en consola por que lo recorrimos con un for in, casi como un array pero sin ser un arrays
+				<br><br><br>
+			</p><br><br>
+
+			<button class="btnMetChild botonEsconderMostrar fa-solid fa-angle-down"></button>
+			<h2	class="Tema">16.10 Metodos de Chilld</h1><br>
+			<p class="Explicacion escondidoMetChild">
+				Con estos metodos podemos reemplazar o remover cualquier elemento child<br><br>
+				<b>Ejemplo</b>: usando 	replaceChild(nuevo, antiguo):<br>
+				&nbsp; &nbsp; &nbsp; <b>const contenedor = document.querySelector(".contenedor");</b><br>
+				&nbsp; &nbsp; &nbsp; <b>const h2Nuevo = document.createElement("H2");</b><br>
+				&nbsp; &nbsp; &nbsp; <b>h2Nuevo.TextContent = "Titulo";</b><br>
+				&nbsp; &nbsp; &nbsp; <b>const h2Antiguo = document.querySelector(".h2aMod");</b><br>
+				&nbsp; &nbsp; &nbsp; <b>contenedor.replaceChild(h2Nuevo, h2Antiguo);</b><br>
+				Lo que nos cambia el h2 antiguo que teniamos en el contenedor a el h2 nuevo que creamos y le asigmanos un texto<br><br><br>
+
+				<b>Ejemplo 2</b>: usando removeChild():<br>
+				&nbsp; &nbsp; &nbsp; <b>const contenedor = document.querySelector(".contenedor");</b><br>
+				&nbsp; &nbsp; &nbsp; <b>const h2 = document.querySelector(".h2");</b><br>
+				&nbsp; &nbsp; &nbsp; <b>contenedor.removeChild(".h2")</b><br><br>
+				Lo que elimina el h2 que está dentro del contendor<br><br><br>
+			
+				<b>Ejemplo 3</b>: usando hasChildNodes():<br>
+				&nbsp; &nbsp; &nbsp; <b>const contenedor = document.querySelector(".contenedor");</b><br>
+				&nbsp; &nbsp; &nbsp; <b>let respuesta = contedor.hasChildNodes();</b><br>
+				Nos devuelve true si tiene hijos o false si no tiene, es util por que como hijos tambien detecta el texto, si el elemento tiene texto entonces la respuesta es verdadera porque si tiene hijos<br><br><br>
+				<br><br>
+				Luego tambien esta para los padres que es <b>contenedor.parentElement;</b> que nos devuelve el padre de los childs
+			</p>
+	</div>
 </div>
+<!-- Fin Tema 16 -->
 
-<script type="text/javascript" src="js/script.js"></script>
+
+<!-- Archivos de JavaScript -->
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/scriptMenu.js"></script>
+<!-- Fin Archivos de JavaScript -->
+
 </body>
 </html>
