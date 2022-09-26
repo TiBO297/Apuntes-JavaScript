@@ -22,3 +22,8 @@ Buscar ideas{
    esto con usuarios se tiene que logear si es una persona pues no y solo se almacena
    pero si, maybe cambiar de clase y ya se queda asi si ella le da al icono de completada
 }
+
+# ideas
+Crear una clase 
+llamar a todos los botones, asi como BtnGenralidades = document.querySelector("btgeneralidades") y llamarlos todos asi
+Luego de tener todos esas variables asignadas a los botones
