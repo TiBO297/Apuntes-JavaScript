@@ -162,6 +162,25 @@ body::-webkit-scrollbar-button {
     }
 
 
+    .botonAnteriorNivelPrimer{
+        position: relative;
+        background-color: transparent;
+        border: none;
+        color:grey;
+        left: 25%;
+        top: 30px;
+    }
+
+    .botonSiguienteNivelUltimo{
+        position: relative;
+        background-color: transparent;
+        border: none;
+        color:grey;
+        left: 910px;
+        top: 30px;
+    }
+
+
     .botonIndex{
         position: absolute;
         background-color: transparent;
