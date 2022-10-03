@@ -31,10 +31,28 @@
 <!-- Fin Botones Arriba/Abajo -->
 
 
+<!-- Fondo animado -->
+<div class="area" >
+	<ul class="circles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+	</ul>
+</div >
+<!-- Fin Fondo animado -->
+
+
     <section class="demo">
         <dl class="list maki">
             <dt>Temas:</dt>
-            <dd><a href="index.html#Generalidades">1. Tema 1</a></dd>
+            <dd><a href="indexCap2.html#window">1. Window</a></dd>
             <dd><a href="">2. Tema 2</a></dd>
             <dd><a href="">3. Tema 3</a></dd>
             <dd><a href="">4. Tema 4</a></dd>
@@ -120,56 +138,55 @@
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<div class="Blur">
-	<button class="btnGeneralidades botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="Generalidades">1. Generalidades</h1>
-	<p class="Explicacion escondidoGeneralidades">-Para asignar un valor es con <b>=</b>
-		<br>
-		-Para decir que es 'igual a' es <b>==</b>
-		<br>
-		-Para imprimir algo en pantalla es <b>document.write("mensaje")</b>
-		<br>
-		-Para mostrar un cuadrito arriba con informaci&oacute;n es <b>alert("Mensaje")</b>
-		<br>
-		-Para mostrar el mismo cuadrito del alert pero para que ingrese informaci&oacute;n es <b>prompt("Escribir mensaje:")</b>
-		<br>
-		-Para cambiar el valor de String a Int es con <b>variable = parseInt(variable);</b> o con <b>let num = Number(str);</b> 
-		<br>
-		-Con <b>typeof variable</b> muestra el tipo de variable si es number, string o cualquier otro
-		<br>
-		-Para asignar cuantos decimales tiene un Float es con numObj.toFixed([digitos])<br>
-		-Es keysensitive, significa que diferencia entre mayuscula y minuscula
-	</p>
-</div><br>
+<div class="espacioArriba">
+    <div class="Blur">
+        <button class="btnGeneralidades botonEsconderMostrar fa-solid fa-angle-down"></button>
+        <h1 class="Tema" id="window">1. Window</h1>
+        <p class="Explicacion escondidoGeneralidades">
+            Hace referencia a la ventana de windows, tiene algunos metodos y propiedades como:<br><br>
+            <b>-Window.open()</b>: Abre una nueva ventana, por ejemplo: window.open(youtube.com) lo que abre youtube <br>
+            <b>-Window.close()</b>: Cierra la ventana actual, o la ventana en la que se llamo
+            <b>-Window.closed</b>: Nos devuelve true si la ventana se cerró, o false si la ventana está abierta
+            <b>-Window.print()</b>: Abre el cuadro de dialogo para imprimir <br><br>
+            <b>---- Screen ----</b> <br><br>
+            Solo son propiedades de lectura, no se pueden modificar <br>
+            <b>window.screen</b>: Nos devuelve las propiedades de la pantalla, son varias, y podemos mandar a llamar una por una asi: <br>
+            <b>window.screenLeft</b>: Nos devuelve la distancia en pixeles entre el borde izquierdo del navegador y el borde izquierdo de la pantalla, tamnien funciona con screenTop <br>
+            <b>window.screenWidth</b>: Nos devuelve el ancho completo de la pantalla <br>
+            <b>window.scrollY</b>: Nos devuelve la cantidad de pixeles que se ha desplazado en el documento, funciona lo mismo con scrollX <br>
+            <b>window.scroll()</b>: Nos desplza hasta el lugar que le indicamos dentro del parentesis, ponemos separado por comas primero el el eje X y luego el eje Y //NOTA: tambien existe el scrollTo() que es casi igual<br>
+            
+            
+        </p>
+    </div><br>
 
 
-<div class="Blur">	
-	<button class="btnArrays botonEsconderMostrar fa-solid fa-angle-down"></button>
-	<h1 class="Tema" id="Arrays">2. Arrays</h1>
-	<p class="Explicacion escondidoArrays">Es como una variable pero podemos guardar muchas cosas en el<br>
-	Por ejemplo: <br>
-		<b> &nbsp; &nbsp; &nbsp; let frutas = ["pera", "manzana", "fresa"];</b><br><br>
-		Podemos mostrar todos los elementos, o individuales asi:<br>
-		<b>document.write(frutas[1]);<br>
-		</b>
-		Que imprime: <b>manzana</b> por que empieza desde el cero
-	<br><br><br>
-	Tambien existen Arrays Asociativos con los que identificamos los nombres de los elementos<br>
-	Ejemplo:<br>
-		<b>let Computadora = {<br>
-			&nbsp; &nbsp; &nbsp; nombre: "TiBOPC",<br>
-			&nbsp; &nbsp; &nbsp; procesador: "intel Core i7",<br>
-			&nbsp; &nbsp; &nbsp; RAM: "16 GB",<br>
-			&nbsp; &nbsp; &nbsp; Espacio: "1TB",<br>
-			&nbsp; &nbsp; &nbsp; Lectora: "DVD"<br>
-			};<br><br>
-		document.write(Computadora["nombre"])<br>
-		</b>
-		Que imprime: <b>TiBOPC</b> por que identificamos que "nombre" tenia ese valor
-	</p>
-</div><br>
-
-
+    <div class="Blur">	
+        <button class="btnArrays botonEsconderMostrar fa-solid fa-angle-down"></button>
+        <h1 class="Tema" id="Arrays">2. Arrays</h1>
+        <p class="Explicacion escondidoArrays">Es como una variable pero podemos guardar muchas cosas en el<br>
+        Por ejemplo: <br>
+            <b> &nbsp; &nbsp; &nbsp; let frutas = ["pera", "manzana", "fresa"];</b><br><br>
+            Podemos mostrar todos los elementos, o individuales asi:<br>
+            <b>document.write(frutas[1]);<br>
+            </b>
+            Que imprime: <b>manzana</b> por que empieza desde el cero
+        <br><br><br>
+        Tambien existen Arrays Asociativos con los que identificamos los nombres de los elementos<br>
+        Ejemplo:<br>
+            <b>let Computadora = {<br>
+                &nbsp; &nbsp; &nbsp; nombre: "TiBOPC",<br>
+                &nbsp; &nbsp; &nbsp; procesador: "intel Core i7",<br>
+                &nbsp; &nbsp; &nbsp; RAM: "16 GB",<br>
+                &nbsp; &nbsp; &nbsp; Espacio: "1TB",<br>
+                &nbsp; &nbsp; &nbsp; Lectora: "DVD"<br>
+                };<br><br>
+            document.write(Computadora["nombre"])<br>
+            </b>
+            Que imprime: <b>TiBOPC</b> por que identificamos que "nombre" tenia ese valor
+        </p>
+    </div>
+</div>
 
 <script type="text/javascript" src="js/script.js"></script>
 </body>

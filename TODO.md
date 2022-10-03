@@ -9,7 +9,7 @@ Cosas por hacer:
 -Buscar  createDocumentFragment() en otro tutorial para entenderle y agregarlo
 
 # En proceso
-
+-Vamos a quitar las flechitas a un lado del titulo y vamos a ponerlas a un lado de las bolitas
 
 # Hecho
 
@@ -27,3 +27,4 @@ Buscar ideas{
 Crear una clase 
 llamar a todos los botones, asi como BtnGenralidades = document.querySelector("btgeneralidades") y llamarlos todos asi
 Luego de tener todos esas variables asignadas a los botones
+Pero no se puede

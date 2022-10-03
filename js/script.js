@@ -31,7 +31,7 @@ window.onload=function()
 
 /* ------------------- Cambio de texto de boton de Mostrar/Esconder los temas en el menu --------------------- */
        //la primer clase que tiene es la de toggle
-       const boton = document.querySelector(".toggle");
+       const boton = document.querySelector(".toggle"); 
 
         //luego cambia la clase cuando se da clic, y se cambia a la otra dependiendo de cual tenga
        boton.addEventListener("click", function(evento){
