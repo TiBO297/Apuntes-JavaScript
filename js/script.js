@@ -16,6 +16,8 @@ document.getElementById("button-up").addEventListener("click", scrollUp);
 
 
 
+
+
 /* -----------------------Bajar al final de la pagina con boton ---------------------------- */
  function scrollDown(){
         window.scrollTo(0, document.body.scrollHeight);
@@ -28,6 +30,8 @@ document.getElementById("button-up").addEventListener("click", scrollUp);
 
 window.onload=function()
 {
+
+
 
 /* ------------------- Cambio de texto de boton de Mostrar/Esconder los temas en el menu --------------------- */
        //la primer clase que tiene es la de toggle
@@ -46,8 +50,6 @@ window.onload=function()
        )
 /* ----------------- Fin  Cambio de texto de boton de Mostrar/Esconder los temas en el menu ------------------------- */
        
-
-
 
 
 
@@ -410,6 +412,7 @@ window.onload=function()
               temaMetChild.classList.toggle("mostrar")
        }
        )
+
 
 /* --------------------------------- Fin mostrar/Esconder los DIVS de explicación ----------------------------- */
 };

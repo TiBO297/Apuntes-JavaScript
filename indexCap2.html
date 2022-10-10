@@ -53,11 +53,11 @@
         <dl class="list maki">
             <dt>Temas:</dt>
             <dd><a href="indexCap2.html#window">1. Window</a></dd>
-            <dd><a href="">2. Tema 2</a></dd>
-            <dd><a href="">3. Tema 3</a></dd>
-            <dd><a href="">4. Tema 4</a></dd>
-            <dd><a href="">5. Tema 5</a></dd>
-            <dd><a href="">6. Terma 6</a></dd>
+            <dd><a href="indexCap2.html#Eventos">2. Eventos</a></dd>
+            <dd><a href="indexCap2.html#Temporizador">3. Temporizador e intervalos</a></dd>
+            <dd><a href="indexCap2.html#Errores">4. Menejo de errores</a></dd>
+            <dd><a href="indexCap2.html#Switch">5. Switch</a></dd>
+            <dd><a href="indexCap2.html#Callback">6. Callback</a></dd>
             <dd><a href="">7. Tema 7</a></dd>
             <dd><a href="">8. Tema 8</a></dd>
             <dd><a href="">9. Tema 9</a></dd>
@@ -140,54 +140,214 @@
 
 <div class="espacioArriba">
     <div class="Blur">
-        <button class="btnGeneralidades botonEsconderMostrar fa-solid fa-angle-down"></button>
+        <button class="btnWindow botonEsconderMostrar fa-solid fa-angle-down"></button>
         <h1 class="Tema" id="window">1. Window</h1>
-        <p class="Explicacion escondidoGeneralidades">
+        <p class="Explicacion escondidoWindow">
             Hace referencia a la ventana de windows, tiene algunos metodos y propiedades como:<br><br>
-            <b>-Window.open()</b>: Abre una nueva ventana, por ejemplo: window.open(youtube.com) lo que abre youtube <br>
-            <b>-Window.close()</b>: Cierra la ventana actual, o la ventana en la que se llamo
+            <b>-Window.open( )</b>: Abre una nueva ventana, por ejemplo: window.open(youtube.com) lo que abre youtube <br>
+            <b>-Window.close( )</b>: Cierra la ventana actual, o la ventana en la que se llamo
             <b>-Window.closed</b>: Nos devuelve true si la ventana se cerró, o false si la ventana está abierta
-            <b>-Window.print()</b>: Abre el cuadro de dialogo para imprimir <br><br>
+            <b>-Window.print( )</b>: Abre el cuadro de dialogo para imprimir <br><br>
             <b>---- Screen ----</b> <br><br>
             Solo son propiedades de lectura, no se pueden modificar <br>
             <b>window.screen</b>: Nos devuelve las propiedades de la pantalla, son varias, y podemos mandar a llamar una por una asi: <br>
             <b>window.screenLeft</b>: Nos devuelve la distancia en pixeles entre el borde izquierdo del navegador y el borde izquierdo de la pantalla, tamnien funciona con screenTop <br>
             <b>window.screenWidth</b>: Nos devuelve el ancho completo de la pantalla <br>
             <b>window.scrollY</b>: Nos devuelve la cantidad de pixeles que se ha desplazado en el documento, funciona lo mismo con scrollX <br>
-            <b>window.scroll()</b>: Nos desplza hasta el lugar que le indicamos dentro del parentesis, ponemos separado por comas primero el el eje X y luego el eje Y //NOTA: tambien existe el scrollTo() que es casi igual<br>
-            
-            
+            <b>window.scroll( )</b>: Nos desplza hasta el lugar que le indicamos dentro del parentesis, ponemos separado por comas primero el el eje X y luego el eje Y //NOTA: tambien existe el scrollTo() que es casi igual<br><br>
+            <b>---- location ----</b> <br><br>
+            <b>window.location.href</b>: devuelve la URL de la pagina actual <br>
+            <b>window.location.hostname</b>: devuelve el nombre de dominio de la pagina actual <br>
+            <b>window.location.pathname</b>: devuelve la ruta y el nombre de archivo de la pagina actual <br>
+            <b>window.location.href</b>: devuelve el protocolo de la pagina actual https o https<br>
+            <b>window.location.assing( )</b>: carga un nuevo documento <br>
+            <img src="images/location.png" style="width: 80%;">
         </p>
     </div><br>
 
 
+<!-- Tema 2 -->
     <div class="Blur">	
-        <button class="btnArrays botonEsconderMostrar fa-solid fa-angle-down"></button>
-        <h1 class="Tema" id="Arrays">2. Arrays</h1>
-        <p class="Explicacion escondidoArrays">Es como una variable pero podemos guardar muchas cosas en el<br>
-        Por ejemplo: <br>
-            <b> &nbsp; &nbsp; &nbsp; let frutas = ["pera", "manzana", "fresa"];</b><br><br>
-            Podemos mostrar todos los elementos, o individuales asi:<br>
-            <b>document.write(frutas[1]);<br>
+        <button class="btnEventos botonEsconderMostrar fa-solid fa-angle-down"></button>
+        <h1 class="Tema" id="Arrays">2. Eventos</h1>
+        <p class="Explicacion escondidoEventos">
+            Para agregar un evento primero se llama la clase del boton, se agrega un addEventListener( ) al cual se le pasa como parametros el evento en comillas y la función que se va a ejecutar cuando el evento dentro de las comillas ocurra <br>
+            Ejemplo <br><br>
+            <b>
+                const button = document.querySelector(".button"); <br><br>
+
+                button.addEventListener("click",  function(evento){<br>
+                &nbsp; &nbsp; &nbsp; &nbsp;  //Codigo a ejecutar <br>
+                } <br>
+                )
+            </b><br><br>
+            Si llamamos una funcion no se pueden usar funciones flecha <br><br><br><br>
+            ---- Como saber a que boton se preciono el clic ---- <br><br>
+            <b>
+                const botones = document.querySelectorAll(".botones"); <br><br>
+
+                const cuandoSeHaceClick = function (evento) {<br>
+
+                    &nbsp; &nbsp; &nbsp; console.log("El texto que tiene es: ", this.innerText); <br>
+
+                    &nbsp; &nbsp; &nbsp;  this.style.borderColor = "blue"; <br>
+                } <br><br>
+
+                botones.forEach(boton => { <br>
+                    &nbsp; &nbsp; &nbsp; boton.addEventListener("click", cuandoSeHaceClick); <br>
+                }); <br><br><br><br>
             </b>
-            Que imprime: <b>manzana</b> por que empieza desde el cero
-        <br><br><br>
-        Tambien existen Arrays Asociativos con los que identificamos los nombres de los elementos<br>
-        Ejemplo:<br>
-            <b>let Computadora = {<br>
-                &nbsp; &nbsp; &nbsp; nombre: "TiBOPC",<br>
-                &nbsp; &nbsp; &nbsp; procesador: "intel Core i7",<br>
-                &nbsp; &nbsp; &nbsp; RAM: "16 GB",<br>
-                &nbsp; &nbsp; &nbsp; Espacio: "1TB",<br>
-                &nbsp; &nbsp; &nbsp; Lectora: "DVD"<br>
-                };<br><br>
-            document.write(Computadora["nombre"])<br>
-            </b>
-            Que imprime: <b>TiBOPC</b> por que identificamos que "nombre" tenia ese valor
+
+            <i>//Si tengo un botón dentro de un contenedor y ambos tienen un eventListener, se ejecuta primero el boton que esta adentro del contenedor, los elementos hijos primero vaya, para evitar esto, se puede poner 'true' antes del parentesis de cierre del evento</i><br><br>
+            <i>Y, si tenemos este contenedor y el boton dentro del contenedor ambos con eventListener y al precionar el botón no queremos que se propague o que se siga ejecutando el eventListener del contenedor podemos usar <b>event.stopPropagation( )</b> ese event es el nombre del parametro que le pasamos a la funcion</i><br><br><br><br>
+
+            ---- Otros eventos ---- <br><br>
+            ---Eventos de mouse--- <br>
+            <b>-dblclick</b>: ocurre cuando hay un doble clic <br>
+            <b>-mouseover</b>: cuando el puntero se mueve dentro del elemento o sobre uno de sus hijos <br>
+            <b>-mouseout</b>: cuando el puntero se mueve fuera del elemento o sus elementos secundarios <br>
+            <b>-contextmenu</b>: cuando se preciona el clic derecho sobre un elemento <br>
+            <b>-mouseup</b>: cuando un usuario suelta el boton del mouse sobre un elemento <br>
+            <b>-mousemove</b>: ocurre cuando el puntero se mueve mientras esta sobre un elemento <br>
+            <i>//Y hay mas eventos de mouse</i> <br><br>
+            ---Eventos de teclado--- <br>
+            <b>-keydown</b>: ocurre cuando una tecla se deja de presionar <br>
+            <b>-keypress</b>: ocurre cuando una tecla se presiona y suelta en un elemento <br>
+            <b>-onkeyup</b>: ocurre cuando los dos eventos anteriores hayan concluido consecutivamente <br><br>
+            ---Eventos de interfaz--- <br>
+            <b>-error</b>: ocurre cuando sucede un error en la carga de archivos multimedia <br>
+            <b>-load</b>: ocurre cuando un objeto se a cargado, funciona con el elemento window, y sirve para verificar que el sitio cargó completamente <br>
+            <b>-beforeunload</b>: ocurre justo antes de precionar en un link para ir a otra pagina<br>
+            <b>-unload</b>: ocurre una vez que se ha descargado una pagina <br>
+            <b>-resize</b>: ocurre cuando se cambia el tamaño de la vista del documento <br>
+            <b>-scroll</b>: ocurre cuando se desplaza la barra de desplazamiento de un elemento <br>
+            <b>-select</b>: ocurre despues de que el usuario selecciona algun texto de input o textarea, ademas, con mas parametros puedo ver que se ha seleciconado del input o textarea <br><br>
+            Para más eventos visitar: <a href="https://www.w3school.com/jsref/obj_events.asp">w3school</a> <br><br><br>
+ 
         </p>
-    </div>
+    </div><br>
+<!-- Fin Tema 2 -->
+
+<!-- Tema 3-->
+    <div class="Blur">
+        <button class="btnTemp botonEsconderMostrar fa-solid fa-angle-down"></button>
+        <h1 class="Tema" id="Temporizador">3. Temporizador e Intervalo</h1>
+        <p class="Explicacion escondidoTemp">
+            ---Temporizador--- <br>
+            Ejemplo: <br>
+            <b>
+                const temporizador = setTimeout(()=>{ <br>
+                    &nbsp; &nbsp; &nbsp; document.write("hola"); <br>
+                }, 2000) <br>
+            </b><br><br>
+            
+            Lo que hace es esperar dos segundo y luego imprime algo en pantalla <br><br><br><br>
+
+            ---Intervalo--- <br>
+            Tambien se puede colocar un intervalo que se repita <br>
+            Ejemplo: <br>
+            <b>
+                const Intervalo = setInterval(()=>{<br>
+                    &nbsp; &nbsp; &nbsp; document.write("hola"); <br>
+                }, 2000) <br><br>
+                clearInterval(Intervalo)
+            </b><br><br>
+            Lo que ejecuta un intervalo donde cada 2 segundos escribe "hola" en el documento <br>
+            Y lo podemos detener escribiendo <b>clearInterval(Intervalo)</b> <br><br><br><br>
+
+            ---Ambos--- <br>
+            Y podemos combinarlos para que algo se ejecute una cierta cantidad de tiempo y luego se detenga <br>
+            Ejemplo: <br>
+            <b>
+                const Intervalo = setInterval(()=>{<br>
+                    &nbsp; &nbsp; &nbsp; document.write("hola"); <br>
+                }, 2000) <br><br>
+
+                setTimeout(()=>{ <br>
+                    &nbsp; &nbsp; &nbsp; clearInterval(Intervalo);
+                }, 7000) <br><br>
+            </b>
+            Lo que ejecuta el intervalo pero a los 7 segundos se detiene
+        </p>
+    </div><br>
+<!-- Fin Tema 3 -->
+
+
+<!-- Tema 4 -->
+<div class="Blur">
+    <button class="btnError botonEsconderMostrar fa-solid fa-angle-down"></button>
+    <h1 class="Tema" id="Errores">4. Manejo de errores</h1>
+    <p class="Explicacion escondidoError">
+       Se usa cuando queremos controlar algun error (se tiene que investigar mas) <br>
+       Ejemplo: <br><br>
+       <b>
+       try{ <br>
+        &nbsp; &nbsp; &nbsp; ejecutar codigo que posiblemente tenga error; <br>
+       } <br>
+       catch(e){ <br>
+        &nbsp; &nbsp; &nbsp; console.log("aqui podemos poner un texto o la e para que nos muestre el error"); <br>
+       } <br>
+       finally{ <br>
+        &nbsp; &nbsp; &nbsp; investigar lo que pasa con el finally <br>
+       } </b><br>
+    </p>
+</div><br>
+<!-- Fin Tema 4 -->
+
+
+
+<!-- Tema 5 -->
+<div class="Blur">
+    <button class="btnSwitch botonEsconderMostrar fa-solid fa-angle-down"></button>
+    <h1 class="Tema" id="Switch">5. Switch</h1>
+    <p class="Explicacion escondidoSwitch">
+        Es una sentencia donde, dependiendo del valor de un parametro, ejecuta un caso u otro <br>
+        Ejemplo: <br><br>
+        <b>
+            let expr = "Banana"; <br><br>
+            switch(expr){ <br>
+                &nbsp; &nbsp; &nbsp; case "Banana": <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.log("caso 1 banana"); <br>
+                &nbsp; &nbsp; &nbsp; break; <br>
+                &nbsp; &nbsp; &nbsp; case "Pera": <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  console.log("caso 2 pera"); <br>
+                &nbsp; &nbsp; &nbsp; break; <br>
+                &nbsp; &nbsp; &nbsp; default: <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; no es ninguna fruta; <br>
+            }
+
+        </b>
+
+    </p>
+</div><br>
+<!-- Fin Tema 5 -->
+
+
+<!-- Tema 6 -->
+<div class="Blur">
+    <button class="btnCallback botonEsconderMostrar fa-solid fa-angle-down"></button>
+    <h1 class="Tema" id="Callback">6. Callback</h1>
+    <p class="Explicacion escondidoCallback">
+        un callback es una funcion dentro de otra función 
+    </p>
+</div><br>
+<!-- Fin Tema 6 -->
+
+
+<!-- Tema 7 -->
+<div class="Blur">
+    <button class="btnPromesas botonEsconderMostrar fa-solid fa-angle-down"></button>
+    <h1 class="Tema" id="Promesas">6. Promesas</h1>
+    <p class="Explicacion escondidoPromesas">
+        exp
+    </p>
+</div><br>
+<!-- Fin Tema 7 -->
+
+
 </div>
 
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/scriptCap2.js"></script>
 </body>
 </html>
