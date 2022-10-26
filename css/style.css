@@ -197,7 +197,7 @@ body::-webkit-scrollbar-button {
 
 
 /*----------------------- Botones de Mostrar/Esconder explicacion--------------------------*/
-.escondidoGeneralidades, .escondidoVariables, .escondidoConcatenar, .escondidoArrays, .escondidoIF, .escondidoWhile, .escondidoBreak, .escondidoDoWhile, .escondidoFor, .escondidoForIn, .escondidoForOf, .escondidoFunciones, .escondidoClases, .escondidoPoo, .escondidoCadena, .escondidoMetodoArray, .escondidoMath, .escondidoConsola, .escondidoDOM, .escondidoSeleccionElementos, .escondidoMetAtributos, .escondidoAtributosGlob, .escondidoAtributosInputs, .escondidoAtributosStyle, .escondidoClassList, .escondidoObModElementos, .escondidoCreaElementos, .escondidoObModChilds, .escondidoMetChild, .escondidoEventos, .escondidoWindow, .escondidoEventos, .escondidoTemp, .escondidoError, .escondidoSwitch, .escondidoCallback, .escondidoPromesas{
+.escondidoGeneralidades, .escondidoVariables, .escondidoConcatenar, .escondidoArrays, .escondidoIF, .escondidoWhile, .escondidoBreak, .escondidoDoWhile, .escondidoFor, .escondidoForIn, .escondidoForOf, .escondidoFunciones, .escondidoClases, .escondidoPoo, .escondidoCadena, .escondidoMetodoArray, .escondidoMath, .escondidoConsola, .escondidoDOM, .escondidoSeleccionElementos, .escondidoMetAtributos, .escondidoAtributosGlob, .escondidoAtributosInputs, .escondidoAtributosStyle, .escondidoClassList, .escondidoObModElementos, .escondidoCreaElementos, .escondidoObModChilds, .escondidoMetChild, .escondidoEventos, .escondidoWindow, .escondidoEventos, .escondidoTemp, .escondidoError, .escondidoSwitch, .escondidoCallback, .escondidoPromesas, .escondidoModal{
     opacity: 0;
     transition: all 0.2s;
     overflow: hidden;
@@ -604,7 +604,31 @@ a {
 
 
 
+.modalDiv{
+    width: 490px;
+    height: 70px;
+    color: white;
+    background-color: red;
+    position: fixed;
+    z-index: 1000;
+    bottom: 10%;
+    left: 65%;
+    display: none;
+}
 
+.modalDiv > p{
+    position: relative;
+    top: 40%;
+}
 
+.btnCerrarModal{
+    position: relative;
+    top: 10%;
+    left: 97%;
+}
+
+.mostrarModal{
+    display: block;
+}
 
 

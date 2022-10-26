@@ -79,5 +79,47 @@
     }
     )
 
+        //Promesas
+        const btnPromesas = document.querySelector(".btnPromesas");
+                                    
+        //Le damos clic al boton
+        btnPromesas.addEventListener("click", function(evento){
+            //Tomamos el div 
+            const temaPromesas = document.querySelector(".escondidoPromesas") ;
+            //Le cambiamos la clase a mostrarla dentro del clic
+            temaPromesas.classList.toggle("mostrar")
+        }
+        )
+
+        //Modal
+        const btnModal = document.querySelector(".btnModal");
+                                    
+        //Le damos clic al boton
+        btnModal.addEventListener("click", function(evento){
+            //Tomamos el div 
+            const temaModal = document.querySelector(".escondidoModal");
+            //Le cambiamos la clase a mostrarla dentro del clic
+            temaModal.classList.toggle("mostrar")
+        }
+        )
+
+        /* Modal */
+        const boton = document.querySelector(".modal")
+
+        boton.addEventListener("click", function(evento){
+            const modalDiv = document.querySelector(".modalDiv");
+            modalDiv.classList.toggle("mostrarModal")
+
+        })
+
+        /* boton cerrar modal */
+        const botonCerrarModal = document.querySelector(".btnCerrarModal")
+
+        botonCerrarModal.addEventListener("click", function(evento){
+            const modalDiv = document.querySelector(".modalDiv");
+            modalDiv.classList.toggle("mostrarModal")
+        })
+
+
 
     
