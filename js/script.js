@@ -13,11 +13,6 @@ document.getElementById("button-up").addEventListener("click", scrollUp);
 /* ----------------------- Fin oton subir al top de la pagina ------------------------------ */
 
 
-
-
-
-
-
 /* -----------------------Bajar al final de la pagina con boton ---------------------------- */
  function scrollDown(){
         window.scrollTo(0, document.body.scrollHeight);
